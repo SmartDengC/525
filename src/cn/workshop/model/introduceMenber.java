@@ -1,5 +1,5 @@
 package cn.workshop.model;
 
-public class users {
+public class introduceMenber {
 	
 }

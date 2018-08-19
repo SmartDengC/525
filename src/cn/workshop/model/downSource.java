@@ -1,6 +1,6 @@
 package cn.workshop.model;
 
-public class manager {
+public class downSource {
 	private String name;
 	private String password;
 

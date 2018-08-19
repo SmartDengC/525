@@ -32,26 +32,25 @@
     <div class="nav">
         <div class="buttom">点击展开菜单</div>
        <ul id="nav">
-           <li><a href="">首页</a></li>
+           <li><a href="index.jsp">首页</a></li>
            <li><a href="">新闻与媒体</a>
                 <ul>
-                <li><a href="">公共信息</a></li>
-                <li><a href="">资源下载</a></li>
-                <li><a href="">信息通知</a></li>
+                <li><a href="noticeInfo.jsp">公共信息</a></li>
+                <li><a href="downSource.jsp">资源下载</a></li>
+                <!--  <li><a href="">信息通知</a></li> -->
                 </ul>
            </li>
            <li><a href="">师资队伍</a>
                 <ul>
-                <li><a href="">人员介绍</a></li>
+                <li><a href="introduceMember.jsp">人员介绍</a></li>
                 </ul>
             </li>
            <li><a href="">联系我们</a>
                 <ul>
-                <li><a href="">办事咨询</a></li>
+                <li><a href="contactUs.jsp">办事咨询</a></li>
                 </ul>
            </li>
            </ul>
-
     </div>
     <div class="banner">
         <div class="mySlides fade">
