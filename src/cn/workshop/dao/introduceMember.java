@@ -8,7 +8,7 @@ public interface introduceMember {
 	 * 查询表中的所有数据 
 	 * @return 返回一个list集合
 	 */
-	List<introduceMenber> serachMember();
+	List<introduceMember> introduceMember();
 	
 	
 	
