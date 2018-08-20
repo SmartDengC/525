@@ -1,12 +1,12 @@
 package cn.workshop.model;
 
 public class downSource {
-	private String id;//Ö÷¼ü
-	private String name;//×ÊÔ´±êÌâ
-	private String introduce;//×ÊÔ´½éÉÜ
-	private String time;//×ÊÔ´ÉÏ´«µÄÊ±¼ä
-	private String url;//×ÊÔ´µØÖ·
-	private String pictureUrl;//Í¼Æ¬Î»ÖÃ£¨ÒÔ¶ººÅ·ÖÀë£¬×î¶àÁ½ÕÅ£©
+	private String id;//ä¸»é”®
+	private String name;//ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½
+	private String introduce;//ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½
+	private String time;//ï¿½ï¿½Ô´ï¿½Ï´ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
+	private String url;//ï¿½ï¿½Ô´ï¿½ï¿½Ö·
+	private String pictureUrl;//Í¼Æ¬Î»ï¿½Ã£ï¿½ï¿½Ô¶ï¿½ï¿½Å·ï¿½ï¿½ë£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å£ï¿½
 	public String getId() {
 		return id;
 	}
