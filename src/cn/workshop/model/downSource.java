@@ -1,7 +1,7 @@
 package cn.workshop.model;
 
 public class downSource {
-	private String id;/
+	private String id;
 	private String name;
 	private String introduce;
 	private String time;
