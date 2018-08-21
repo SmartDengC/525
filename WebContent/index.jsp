@@ -53,14 +53,15 @@
            </ul>
     </div>
     <div class="banner">
-        <div class="mySlides fade">
-        <img src="./img/05.jpg" alt="" width="100%" >
-        </div>
+       
         <div class="mySlides fade">
         <img src="./img/03.jpg" alt="" width="100%">
         </div>
         <div class="mySlides fade">
         <img src="./img/04.jpg" alt="" width="100%">
+        </div>
+         <div class="mySlides fade">
+        <img src="./img/2_1.jpg" alt="" width="100%" >
         </div>
         <div class="buttomer">
         <span class="dot" onclick="currentSlide(1)"></span> 
@@ -78,14 +79,16 @@
     <div class="footer">
         <div class="ffooter">
         <ul>
-            <li><a href="#">公共信息</a>
+            <li><a href="noticeInfo.jsp">公共信息</a>
                 <ul>
-                    <li><a href="">资源下载</a></li>
-                    <li><a href="">信息通知</a></li>
+                    <li><a href="downSource.jsp">资源下载</a></li>
+                    
+                    <!--<li><a href="">信息通知</a></li>
+                    -->
                     </ul>
             </li>
-            <li><a href="#">人员介绍</a></li>
-            <li><a href="#">办事咨询</a></li>
+            <li><a href="introduceMember.jsp">人员介绍</a></li>
+            <li><a href="contactUs.jsp">办事咨询</a></li>
         </ul>
     </div>
     </div>
