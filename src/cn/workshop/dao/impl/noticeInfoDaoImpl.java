@@ -29,14 +29,12 @@ public class noticeInfoDaoImpl implements noticeInfo {
 		
 		try {
 			while(resultset.next()){
-				cn.workshop.model.downSource down =new cn.workshop.model.downSource();
-				down.setId(resultset.getString("id"));
-				down.setTitle(resultset.getString("title"));
-				down.setTime(resultset.getString("time"));
-				down.setText(resultset.getString("text"));
-				
-				
-				down.setPictureUrl(resultset.getString("pictureUrl"));
+				cn.workshop.model.noticeInfo info =new cn.workshop.model.noticeInfo();
+				info.setId(resultset.getString("id"));
+				info.setTitle(resultset.getString("title"));
+				info.setTime(resultset.getString("time"));
+				info.setText(resultset.getString("text"));
+				info.setPictureUrl(resultset.getString("pictureUrl"));
 				list.add((noticeInfo) info);
 				
 			}
@@ -45,8 +43,6 @@ public class noticeInfoDaoImpl implements noticeInfo {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
 		
 		return list;
 	}

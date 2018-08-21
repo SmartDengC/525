@@ -28,13 +28,14 @@ public class downSourceDaoImpl implements downSource {
 			
 			try {
 				while(resultset.next()){
-					cn.workshop.model.noticeInfo info =new cn.workshop.model.noticeInfo();
-					info.setId(resultset.getString("id"));
-					info.setTitle(resultset.getString("title"));
-					info.setTime(resultset.getString("time"));
-					info.setText(resultset.getString("text"));
-					info.setPictureUrl(resultset.getString("pictureUrl"));
-					list.add((noticeInfo) info);
+					cn.workshop.model.downSource down =new cn.workshop.model.downSource();
+					down.setId(resultset.getString("id"));
+					down.setName(resultset.getString("name"));
+					down.setIntroduce(resultset.getString("introduce"));
+					down.setTime(resultset.getString("time"));
+					down.setUrl(resultset.getString("url"));
+					down.setPictureUrl(resultset.getString("pictureUrl"));
+					list.add((downSource) down);
 					
 				}
 				return list;
@@ -46,7 +47,8 @@ public class downSourceDaoImpl implements downSource {
 			
 			
 			return list;
-		}
-	}
 
+	}
 }
+
+
