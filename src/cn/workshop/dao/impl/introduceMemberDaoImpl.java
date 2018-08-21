@@ -35,14 +35,14 @@ public class introduceMemberDaoImpl implements introduceMember {
 				member.setPictureUrl(resultset.getString("PictureUrl"));
 				member.setContactInformation(resultset.getString("contactInformation"));
 				member.setKey(resultset.getString("key"));
-				
-				
+				list.add((cn.workshop.dao.introduceMember) member);
 			}
+			return list;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return null;
+		return list;
 	}
 
 }
