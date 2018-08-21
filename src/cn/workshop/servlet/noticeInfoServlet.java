@@ -1,11 +1,16 @@
 package cn.workshop.servlet;
 
 import java.io.IOException;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import cn.workshop.dao.noticeInfo;
+import cn.workshop.service.impl.noticeInfoImpl;
 
 /**
  * Servlet implementation class noticeInfoServlet
@@ -27,7 +32,8 @@ public class noticeInfoServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		doPost(request,response);
 	}
 
 	/**
@@ -35,7 +41,13 @@ public class noticeInfoServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		//doGet(request, response);
+		List<noticeInfo>list=null;
+		noticeInfoImpl nii=new noticeInfoImpl();
+		list=nii.queryNoticeInfo();
+		
+		request.setAttribute("noticeInfo", list);
+		request.getRequestDispatcher("/noticeInfo.jsp").forward(request, response);
 	}
 
 }

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+<%@ page import="java.util.*,cn.workshop.dao.noticeInfo" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
@@ -54,7 +55,22 @@
 
     </div>
     <div >
-       这里是公共信息的页面 
+       这里是公共信息的页面 <br/>
+       <%
+       List<noticeInfo> list=null;
+       list=(List<noticeInfo>)request.getAttribute("noticeInfo");
+       if(list==null)
+       		out.write("<strong>list中没有数据</strong>");
+       else
+    	    out.write("<strong>list中有数据</strong>");
+       %>
+       <%
+       for(int i=0;i<20;i++)
+       {
+    	   out.write("<br>");
+       }
+       
+       %>
     </div>
     <div class="onfooter">
         <ul>
