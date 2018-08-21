@@ -1,6 +1,6 @@
 package cn.workshop.model;
 
-public class introduceMember {
+public class introduceMemberModel {
 	private String id;//主键
 	private String name;//成员名字
 	private String duty;//成员职位
@@ -8,6 +8,7 @@ public class introduceMember {
 	private String pictureUrl;//图片位置
 	private String contactInformation;
 	private String key;//角色标记
+	public introduceMemberModel(){};
 	public String getId() {
 		return id;
 	}

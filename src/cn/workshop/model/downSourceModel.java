@@ -1,6 +1,6 @@
 package cn.workshop.model;
 
-public class downSource {
+public class downSourceModel {
 	private String id;
 	private String name;
 	private String introduce;

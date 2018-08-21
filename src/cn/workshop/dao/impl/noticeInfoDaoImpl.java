@@ -15,7 +15,7 @@ import cn.workshop.utils.DButils;
 public class noticeInfoDaoImpl implements noticeInfo {
 
 	@Override
-	public List<noticeInfo> queryNoticeInfo() {
+	public List<noticeInfoModel> queryNoticeInfo() {
 		Connection connection=null;
 		Statement statement=null;
 		ResultSet resultset =null;
@@ -23,19 +23,24 @@ public class noticeInfoDaoImpl implements noticeInfo {
 		connection = conn.DBcon();
 		statement =conn.DBstatement(connection);
 		String sql =" SELECT *FROM NOTICEINFO;;";
-		resultset=conn.DBresultset(statement,sql);
+		try {
+			resultset=statement.executeQuery(sql);
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
-		List<noticeInfo> list =new ArrayList<noticeInfo>();
+		List<noticeInfoModel> list =new ArrayList<noticeInfoModel>();
 		
 		try {
 			while(resultset.next()){
-				cn.workshop.model.noticeInfo info =new cn.workshop.model.noticeInfo();
+				noticeInfoModel info =new noticeInfoModel();
 				info.setId(resultset.getString("id"));
 				info.setTitle(resultset.getString("title"));
 				info.setTime(resultset.getString("time"));
 				info.setText(resultset.getString("text"));
 				info.setPictureUrl(resultset.getString("pictureUrl"));
-				list.add((noticeInfo) info);
+				list.add( info);
 				
 			}
 			return list;
@@ -46,5 +51,7 @@ public class noticeInfoDaoImpl implements noticeInfo {
 		
 		return list;
 	}
+	
+	
 
 }

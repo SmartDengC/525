@@ -1,5 +1,4 @@
 package cn.workshop.dao.impl;
-
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -8,12 +7,12 @@ import java.util.ArrayList;
 import java.util.List;
 import cn.workshop.dao.introduceMember;
 import cn.workshop.utils.DButils;
-import cn.workshop.model.*;
+import cn.workshop.model.introduceMemberModel;
 
 public class introduceMemberDaoImpl implements introduceMember {
 
 	@Override
-	public List<cn.workshop.dao.introduceMember> introduceMember() {
+	public List<introduceMemberModel> introduceMember() {
 		Connection connection=null;
 		Statement statement=null;
 		ResultSet resultset =null;
@@ -21,13 +20,19 @@ public class introduceMemberDaoImpl implements introduceMember {
 		connection = conn.DBcon();
 		statement =conn.DBstatement(connection);
 		String sql =" SELECT *FROM INTRODUCEMEMBER;";
-		resultset=conn.DBresultset(statement,sql);
+		try {
+			resultset=statement.executeQuery(sql);
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
-		List<introduceMember> list =new ArrayList<introduceMember>();
+		List<introduceMemberModel> list =new ArrayList<introduceMemberModel>();
 		
 		try {
 			while(resultset.next()){
-				cn.workshop.model.introduceMember member=new cn.workshop.model.introduceMember();
+				
+				introduceMemberModel member=new introduceMemberModel();
 				member.setId(resultset.getString("id"));
 				member.setName(resultset.getString("Name"));
 				member.setDuty(resultset.getString("Duty"));
@@ -35,7 +40,7 @@ public class introduceMemberDaoImpl implements introduceMember {
 				member.setPictureUrl(resultset.getString("PictureUrl"));
 				member.setContactInformation(resultset.getString("contactInformation"));
 				member.setKey(resultset.getString("key"));
-				list.add((cn.workshop.dao.introduceMember) member);
+				list.add(member);
 			}
 			return list;
 		} catch (SQLException e) {
@@ -44,5 +49,7 @@ public class introduceMemberDaoImpl implements introduceMember {
 		}
 		return list;
 	}
+
+
 
 }

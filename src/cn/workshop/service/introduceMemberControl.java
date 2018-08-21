@@ -1,7 +1,7 @@
 package cn.workshop.service;
 
 import java.util.List;
-import cn.workshop.model.introduceMember;;
+import cn.workshop.model.introduceMemberModel;;
 
 /*
  * 
@@ -13,5 +13,5 @@ public interface introduceMemberControl {
 	 * 
 	 * @return 一个包包含有成员的List
 	 */
-	public List<introduceMember> getAllIntroduceMenber();
+	public List<introduceMemberModel> getAllIntroduceMenber();
 }

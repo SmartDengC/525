@@ -45,7 +45,7 @@ public  class DButils  {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return null;
+		return statement;
 		
 	}
 	//创建resultset的对象
@@ -59,7 +59,7 @@ public  class DButils  {
 			e.printStackTrace();
 		}
 		
-		return null;
+		return resultset;
 		
 	}
 	

@@ -13,5 +13,5 @@ public interface downSourceControl {
 	 * 
 	 * @return 一个所有下载资源的List集合
 	 */
-	public List<downSource> getAllDownSource();
+	public List<downSourceModel> getAllDownSource();
 }

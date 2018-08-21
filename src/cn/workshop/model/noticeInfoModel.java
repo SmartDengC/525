@@ -1,6 +1,6 @@
 package cn.workshop.model;
 
-public class noticeInfo {
+public class noticeInfoModel {
 	private String id;//主键
 	private String title;//信息标题
 	private String time;//信息时间
