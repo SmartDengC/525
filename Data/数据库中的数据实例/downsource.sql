@@ -1,0 +1,4 @@
+INSERT INTO `downsource` VALUES (1, '网络渗透技术', '和科技术', '2018-08-21 15:05:05', 'https://pan.baidu.com/s/1nvGG0WT', 'zy_kcjs.jpg');
+INSERT INTO `downsource` VALUES (2, 'ps钢笔工具抠图视频教程', '抠图钢笔工具教程', '2018-08-21 15:05:09', 'https://pan.baidu.com/s/1rpM_8rmb5_4sumHDFZRSIA', 'zy_koutu.jpg');
+INSERT INTO `downsource` VALUES (3, '慕课网', '慕课网是垂直的互联网IT技能免费学习网站。以独家视频教程、在线编程工具、学习计划、问答社区为核心特色。在这里，你可以找到最好的互联网技术牛人，也可以通过免费的在线公开视频课程学习国内领先的互联网IT技术。', '2018-08-21 15:31:51', 'https://www.imooc.com/', 'zy_mkw.jpg');
+INSERT INTO `downsource` VALUES (4, '中国大学MOOC', '大型开放式网络课程，即MOOC（massive open online courses）。2012年，美国的顶尖大学陆续设立网络学习平台，在网上提供免费课程，Coursera、Udacity、edX三大课程提供商的兴起，给更多学生提供了系统学习的可能。这三个大平台的课程全部针对高等教育，并且像真正的大学一样，有一套自己的学习和管理系统。再者，它们的课程都是免费的。', '2018-08-21 15:37:09', 'https://www.icourse163.org/', 'zy_mooc.jpg');
