@@ -4,10 +4,8 @@ import java.util.List;
 
 import cn.workshop.dao.introduceMember;
 import cn.workshop.dao.impl.introduceMemberDaoImpl;
-import cn.workshop.model.introduceMenber;
 
 public class introduceMemberImpl implements introduceMember {
-
 
 	@Override
 	public List<introduceMember> introduceMember() {
