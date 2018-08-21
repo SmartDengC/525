@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import cn.workshop.dao.introduceMember;
+import cn.workshop.model.introduceMemberModel;
 import cn.workshop.service.impl.introduceMemberImpl;
 
 /**
@@ -43,7 +44,7 @@ public class introduceMemberServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
 		introduceMemberImpl imi=new introduceMemberImpl();
-		List<introduceMember> list=null;
+		List<introduceMemberModel> list=null;
 		list=imi.introduceMember();
 		request.setAttribute("introduceMember", list);
 		request.getRequestDispatcher("/introduceMember.jsp").forward(request, response);

@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import cn.workshop.dao.noticeInfo;
+import cn.workshop.model.noticeInfoModel;
 import cn.workshop.service.impl.noticeInfoImpl;
 
 /**
@@ -42,7 +43,7 @@ public class noticeInfoServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
-		List<noticeInfo>list=null;
+		List<noticeInfoModel>list=null;
 		noticeInfoImpl nii=new noticeInfoImpl();
 		list=nii.queryNoticeInfo();
 		

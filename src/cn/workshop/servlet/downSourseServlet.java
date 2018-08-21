@@ -8,8 +8,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import cn.workshop.dao.downSource;
+import cn.workshop.model.downSourceModel;
 import cn.workshop.service.impl.dowmSourseImpl;
 
 /**
@@ -42,7 +42,7 @@ public class downSourseServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		dowmSourseImpl dsi=new dowmSourseImpl();
-		List<downSource> list=dsi.queryDownSource();
+		List<downSourceModel> list=dsi.queryDownSource();
 		request.setAttribute("dowmSourse", list);
 		request.getRequestDispatcher("/downSourse.jsp").forward(request,response);		
 	}
