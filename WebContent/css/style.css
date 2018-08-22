@@ -106,8 +106,7 @@ body{
 	-webkit-transition:.3s;
 	-moz-transition:.3s;
     outline: none;
-    border-top-left-radius:10px;
-    border-bottom-left-radius:10px;
+    border-radius:8px;
 }
 .search .sinput:focus {
 	width:220px;
@@ -118,15 +117,12 @@ body{
     font-size:12px;
     padding:0 12px;
     width:60px;
-    background:white;
 	margin-left:-1px;
 	display:inline-block;
-    background:#ddd;;
     float:left;
 	border:#A7A7A7 1px ;
-    border-top-right-radius:10px;
-    border-bottom-right-radius:10px;
-
+    background: url('../img/06.png') center no-repeat;
+    background-size: 75%;
 }
 #sou{
    width:41px;
@@ -137,18 +133,18 @@ body{
    cursor:pointer;
   
 }
-.search .sbtn:hover {
+/* .search .sbtn:hover {
     background:#fff;
-}
+} */
 .banner{
     position: relative;
     width:70%;
     margin: 0px auto;
 }
-
 .mySlide{
     position:absolute;
 }
+.fade img{height: 530px;}
 .fade{
     animation-name: fade;
     animation-duration: 2s;
@@ -184,11 +180,10 @@ body{
 }
 .onfooter ul{
     height:3em;
-    margin: 0 ;
+    margin: 0;
     padding: 0;
     text-align: center;
     line-height: 3em;
-    
 
 }
 

@@ -49,7 +49,20 @@ public class introduceMemberDaoImpl implements introduceMember {
 		}
 		return list;
 	}
-
+	
+	//²âÊÔÖ÷º¯Êý
+	/**
+	public static void main(String[] args) {
+		introduceMember i=new introduceMemberDaoImpl();
+		List<introduceMemberModel> list= new ArrayList<introduceMemberModel>();
+		list=i.introduceMember();
+		for(introduceMemberModel member:list){
+			System.out.println(member.getId()+"\n"+member.getName()+"\n"+member.getDuty()+"\n"+member.getIntroduce()+"\n"+member.getPictureUrl()+"\n"+member.getContactInformation()+"\n"+member.getKey());
+			System.out.println("\n");
+		}
+			
+		}
+	*/
 
 
 }

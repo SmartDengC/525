@@ -6,8 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="官网">
+    <link rel="stylesheet" href="./css/ziyuan.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/MT.css">
+
     <title>工作室网站</title>
 </head>
 <body>
@@ -22,9 +23,9 @@
        <form class="search"  method="get" style="position:absolute;right:10em;top:2em;">
         <input class="sinput" type="text" name="s" /> 
         <input class="sbtn" type="submit" value=""/>
-        <img src="./img/06.png" id="sou"/>
         
     </form></div>
+
    
 
 </div>
@@ -32,12 +33,11 @@
     <div class="nav">
         <div class="buttom">点击展开菜单</div>
        <ul id="nav">
-           <li><a href="">首页</a></li>
+           <li><a href="index.jsp" target="_self">首页</a></li>
            <li><a href="">新闻与媒体</a>
                 <ul>
-                <li><a href="noticeInfo.jsp">公共信息</a></li>
-                <li><a href="downSource.jsp">资源下载</a></li>
-                <!--  <li><a href="">信息通知</a></li> -->
+                <li><a href="noticeInfoServlet" target="_self">公共信息</a></li>
+                <li><a href="downSource.jsp" target="_self">资源下载</a></li>
                 </ul>
            </li>
            <li><a href="">师资队伍</a>
@@ -53,10 +53,84 @@
            </ul>
 
     </div>
-    <div>
-        这里是资源下载页面
-    </div>
-    <div class="onfooter">
+    <div class="inf">
+            <div class="list">
+                    <ul> <li class="oli"><a href="noticeInfoServlet" target="_self">公共信息</a></li></ul>
+                    <ul> <li class="mli"><a href="downSource.jsp" target="_self">资源下载</a></li></ul>
+             </div>
+    <div class="new">
+        <div class="jiao"></div>
+        <div class="j1">
+            <h1>面试比赛</h1>
+            <div class="nk" >
+                <img src="./img/logo8.png" ><p >牛客网<a href="https://www.nowcoder.com/login" target="_blank"  class="nk1">https://www.nowcoder.com/login</a></p>
+            </div>
+            <div class="tc">
+                <img src="./img/logo10.png" ><p >天池<a href="https://tianchi.aliyun.com/" target="_blank" class="tc1" >https://tianchi.aliyun.com/</a></p>
+            </div>
+        </div>
+            <div class="j2">
+                <h1>优质网站</h1>
+                <div class="gi"> 
+                        <div>
+                                    <ul class="ogi">
+                                            <li class="bli">github</li>
+                                            <li class="grayli">(程序员的托儿所)</li>                  
+                                   </ul>
+                                     <img src="./img/logo4.png">
+                        </div>
+                        <p><a href="https://github.com/">https://github.com/</a></p> 
+                </div>
+            <div class="ir"> 
+                       <div> 
+                                    <img src="./img/logo7.png">
+                                    <ul class="oir">
+                                          <li class="bli">爱软客</li>
+                                          <li class="grayli">(万能软件下载)</li>
+                                    </ul> 
+                        </div>
+                      <p><a href="http://www.bokeboke.net/">http://www.bokeboke.net/</a></p> 
+                </div>
+            
+            <div class="cs" >
+                        <div>
+                                <img src="./img/logo2.png">
+                                     <ul class="ocs">
+                                         <li class="bli">CSDN</li>
+                                         <li class="grayli">(博客社区)</li>
+                                     </ul>
+                                    
+                       </div>
+                        <p><a href="https://www.csdn.net/">https://www.csdn.net/</a></p> 
+              </div> 
+              <div class="im" >
+                    <div>
+                            <img src="./img/logo1.png">
+                                 <ul class="oim">
+                                     <li class="bli">imooc</li>
+                                     <li class="grayli">(IT自学网站)</li>
+                                 </ul>
+                                
+                   </div>
+                    <p><a href="https://www.imooc.com/">https://www.imooc.com/</a></p> 
+          </div> 
+          </div>
+             <div class="j3">
+                    <h1>经典文章</h1>
+                    <ul>
+                            <li><a href="">如何使用github?</a></li>
+                            <li><a href="">前后端必备的linux基础?</a></li>
+                            <li><a href="">java9种排序详解和实例汇总</a></li>
+                            <li><a href="">鼠标共享效率工具——Synergy</a></li>
+                            <li><a href="">XXXXXXXXXXXXXXXXXXXXXXXXXX</a></li>
+                            <li><a href="">XXXXXXXXXXXXXXXXXXXXXXXXXXX</a></li>
+
+                    </ul>
+            </div>   
+        </div>
+ </div>
+
+   <div class="onfooter">
         <ul>
             <li>新闻媒体</li>
             <li>师资队伍</li>
@@ -66,17 +140,17 @@
     <div class="footer">
         <div class="ffooter">
         <ul>
-            <li><a href="#">公共信息</a>
+            <li><a href="noticeInfo.jsp" target="_self">公共信息</a>
                 <ul>
-                    <li><a href="">资源下载</a></li>
-                    <li><a href="">信息通知</a></li>
+                    <li><a href="downSource.jsp" target="_self">资源下载</a></li>
                     </ul>
             </li>
-            <li><a href="#">人员介绍</a></li>
-            <li><a href="#">办事咨询</a></li>
+            <li><a href="introduceMember.jsp">人员介绍</a></li>
+            <li><a href="contactUs.jsp">办事咨询</a></li>
         </ul>
+     </div>
     </div>
-    </div>
-    <script src="./js/buttom.js"></script>
+
+    <script src="./js/fenye.js"></script>
 </body>
 </html>

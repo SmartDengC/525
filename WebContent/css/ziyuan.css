@@ -1,0 +1,238 @@
+.inf{width :70%;
+    margin: 0 auto;
+    height:950px;;
+    background: rgb(205,216,248);
+    position: relative;
+  }
+  .inf .list{
+      width:20%;
+      background: rgb(205,206,211);
+      height:900px;
+      margin-top:25px;
+      margin-bottom: 25px;
+      float: left;
+      margin-left:30px;
+      margin-right:50px;
+      border-radius: 1em;
+  }
+  .inf ul li{list-style-type:none;}
+  .inf ul li a:hover{color:red;}
+  .inf .list ul a{text-decoration: none;color:black;}
+  .inf .new{
+      width:66%;
+      height:900px;
+      margin-top:25px;
+      margin-bottom: 25px;
+      background: white;
+      border-radius: 1em;
+      border:4px solid rgb(196,200,216); 
+      position:relative; 
+      display: inline-block;
+   
+  }
+  .inf .list ul{
+      background: rgb(205,217,219);
+  
+  
+  }
+  .inf .list ul .mli{
+      margin-top: 40px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-weight: bolder;
+      background-image: url(../img/sgn.png); 
+      background-size:35px;  
+      background-repeat: no-repeat;
+      background-position: 0px 8px;
+  }
+  .inf .list ul .oli,.fli{
+      margin-top: 40px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-weight: bolder;
+      background-image: url(../img/sgrr.png); 
+      background-size:35px;  
+      background-repeat: no-repeat;
+      background-position: 0px 8px;
+  }
+  
+  
+  .inf .new .jiao{
+      height:0px;
+      width: 0px;
+      position:absolute;
+      border:25px solid white  ;
+      border-top-color:white ;
+      border-right-color:white;
+      top:122px;
+      left:-22px;
+      transform:rotate(45deg);
+  
+  }
+  .inf .new::before{
+      content:'';
+      position:absolute;
+      border:25px solid rgb(196,200,216) ;
+      top:122px;
+      left:-26px;
+      transform:rotate(45deg);
+  
+  }
+  .j1,.j2{
+      width: 80%;
+      margin:0 auto;
+ 
+  }
+  .j3{     
+    width: 80%;
+    margin:0 auto;
+  }
+  .j1,.j2,.j3 p{
+      border-top:4px;
+      overflow: hidden;
+  }
+  
+  .j1{height:220px;position: relative;
+      
+  }
+  .j2{height:290px;position: relative;
+   }
+
+  .j3{height:250px;}
+ .j1 h1{
+    border-bottom: solid 2px;
+    color: rgb(133,87,88);
+  }
+  .j2 h1{
+    border-bottom: solid 2px;
+    color: rgb(120,124,156);
+  }
+  .j3 h1{
+    border-bottom: solid 2px;
+    color: rgb(111,151,116);
+  }
+.nk{
+      font-size:15px;
+      border-bottom: dashed 2px rgb(205,206,211);
+      height:60px;
+}
+.nk img{width: 90px;height:40px;}
+.nk img,p{
+   float: left;
+}
+
+.nk a{margin-left:20px;}
+.tc a{margin-left:20px;}
+.tc{
+    font-size:15px;
+    border-bottom: dashed 2px rgb(205,206,211);
+    height:60px;
+    margin-top:10px;
+}
+.tc img{width: 180px;height:40px;}
+.tc img,p{
+    float: left;
+}
+
+.nk p{margin-left: 20px;}
+.tc p{margin-left: 20px;}
+.gi img{width:38px;height: 38px;display: inline-block;}
+.gi{
+    border-bottom:solid 2px;
+    width: 40%;height: 60px;
+}
+.ogi{
+    padding-left:0px;
+    list-style:none;
+    float: left;
+    margin: 0px 30px 0px 0px;
+}
+.ogi p{margin-top:0px;    display: inline-block;}
+.ir{
+    position:absolute;
+    right:10px;top:86px;
+    border-bottom:solid 2px;
+    width: 40%;height: 60px;
+}
+.ir img{
+    width:66px;height: 38px;}
+.oir{
+    list-style:none;
+    float: right;;
+    padding-left:0px;
+    margin:0px;
+}
+.bli{font-size: 12px;}
+.j2 li{font-weight: bold;}
+ .grayli{color:rgb(215,215,215);font-size:12px;}
+ a{text-decoration: none;font-size:14px;}
+
+    
+.cs{
+   
+    
+    border-bottom:solid 2px;
+    width: 40%;height: 100px;
+}
+.ocs{
+    list-style:none; float: left;
+   
+    padding-left:0px;
+
+}
+.ocs li{font-size: 14px;}
+.cs p{margin-top:0px;position: relative;}
+.cs img{
+    width:50px;height: 48px;padding-bottom:0px;
+    position: absolute;bottom:44px;left:120px;
+}
+.im{
+   
+    position: absolute;right: 12px;top:150px;
+    border-bottom:solid 2px;
+    width: 40%;height: 100px;
+}
+.oim{
+    list-style:none; 
+    float: right;
+    padding-left:0px;margin-top:44px;
+
+}
+.oim li{font-size: 14px;}
+.im p{margin-top:-10px;}
+.im img{
+    width:90px;height: 68px;padding-bottom:0px;
+    margin-top:40px;
+}
+.j3 ul li{
+    list-style:none;
+    border-bottom: dashed 2px rgb(111,151,116);
+    height:40px;
+    font-size: 30px;
+}
+.j3 ul,li{padding: 0px;margin: 0px;}
+.j3 ul li a{color: black;}
+.j3 ul li a{text-decoration:none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

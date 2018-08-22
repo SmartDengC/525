@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="官网">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/MT.css">
+    <link rel="stylesheet" href="./css/xinwen.css">
     <title>工作室网站</title>
 </head>
 <body>
@@ -28,17 +28,17 @@
     </form></div>
    
 
+
 </div>
 
     <div class="nav">
         <div class="buttom">点击展开菜单</div>
        <ul id="nav">
-           <li><a href="">首页</a></li>
+           <li><a href="index.jsp" target="_self">首页</a></li>
            <li><a href="">新闻与媒体</a>
                 <ul>
-                <li><a href="noticeInfo.jsp">公共信息</a></li>
-                <li><a href="downSource.jsp">资源下载</a></li>
-                <!--  <li><a href="">信息通知</a></li> -->
+                <li><a href="noticeInfoServlet" target="_self">公共信息</a></li>
+                <li><a href="downSource.jsp" target="_self">资源下载</a></li>
                 </ul>
            </li>
            <li><a href="">师资队伍</a>
@@ -54,6 +54,67 @@
            </ul>
 
     </div>
+    <div class="inf">
+        <div class="list">
+                        <ul> <li class="oli"><a href="noticeInfoServlet" target="_self">公共信息</a></li></ul>
+                        <ul> <li class="mli"><a href="downSource.jsp" target="_self">资源下载</a></li></ul>
+
+        </div>
+        <div class="new">
+            <div class="jiao"></div>
+            <div class="j1">
+                <h4>[重要事的标题]</h4>
+                <p>&nbsp;&nbsp;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+            </div>
+            <div class="j2">
+                    <h4>[新闻之类的标题]</h4>
+                </p>&nbsp;&nbsp;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                <img src="./img/q1.png" ><img src="./img/q2.png" >
+            </div>
+            <div class="j3">
+                    <h4>这个就是可看可不看不重要的</h4>
+                    <p>&nbsp;&nbsp;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+
+            </div>
+       </div>
+       <div class="fenye">
+            <ul>
+                    <li class="page_li">
+                        <button class="page_btn" style="width:100px" id="prePage">上一页</button>
+                    </li>
+                    <li class="page_li">
+                        <button class="page_btn" id="page_btn1">1</button>
+                    </li>
+                    <li class="page_li">
+                        <span class="pages_span" id="prePoint">...</span>
+                    </li>
+                    <li class="page_li">
+                        <button class="page_btn" id="page_btn2"></button>
+                    </li>
+                    <li class="page_li">
+                        <button class="page_btn" id="page_btn3"></button>
+                    </li>
+                    <li class="page_li">
+                        <button class="page_btn" id="page_btn4"></button>
+                    </li>
+                    <li class="page_li">
+                        <button class="page_btn" id="page_btn5"></button>
+                    </li>
+                    <li class="page_li">
+                        <button class="page_btn" id="page_btn6"></button>
+                    </li>
+                    <li class="page_li">
+                        <span class="pages_span" id="sufPoint">...</span>
+                    </li>
+                    <li class="page_li">
+                        <button class="page_btn" id="page_btn7"></button>
+                    </li>
+                    <li class="page_li">
+                        <button class="page_btn" style="width:100px" id="sufPage">下一页</button>
+                    </li>
+                </ul>
+       </div>
+   </div>
     <div >
        这里是公共信息的页面 <br/>
        <%
@@ -65,14 +126,13 @@
     	    out.write("<strong>list中有数据</strong>");
        %>
        <%
-       for(int i=0;i<20;i++)
-       {
+       for(int i=0;i<20;i++){
     	   out.write("<br>");
        }
        
        %>
     </div>
-    <div class="onfooter">
+       <div class="onfooter">
         <ul>
             <li>新闻媒体</li>
             <li>师资队伍</li>
@@ -82,17 +142,17 @@
     <div class="footer">
         <div class="ffooter">
         <ul>
-            <li><a href="#">公共信息</a>
+            <li><a href="noticeInfo.jsp" target="_self">公共信息</a>
                 <ul>
-                    <li><a href="">资源下载</a></li>
-                    <li><a href="">信息通知</a></li>
+                    <li><a href="downSource.jsp" target="_self">资源下载</a></li>
                     </ul>
             </li>
-            <li><a href="#">人员介绍</a></li>
-            <li><a href="#">办事咨询</a></li>
+            <li><a href="introduceMember.jsp">人员介绍</a></li>
+            <li><a href="contactUs.jsp">办事咨询</a></li>
         </ul>
     </div>
     </div>
-    <script src="./js/buttom.js"></script>
+
+    <script src="./js/fenye.js"></script>
 </body>
 </html>

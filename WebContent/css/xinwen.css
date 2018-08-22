@@ -1,0 +1,145 @@
+.inf{width :70%;
+  margin: 0 auto;
+  height:850px;;
+  background: rgb(205,216,248);
+  position: relative;
+}
+.inf .list{
+    width:20%;
+    background: rgb(205,206,211);
+    height:800px;
+    margin-top:25px;
+    margin-bottom: 25px;
+    float: left;
+    margin-left:30px;
+    margin-right:50px;
+    border-radius: 1em;
+}
+.inf ul li{list-style-type:none;}
+.inf ul li a:hover{color:red;}
+.inf .list ul a{text-decoration: none;color:black;}
+.inf .new{
+    width:66%;
+    height:780px;
+    margin-top:25px;
+    margin-bottom: 25px;
+    background: white;
+    border-radius: 1em;
+    border:4px solid rgb(196,200,216); 
+    position:relative; 
+    display: inline-block;
+ 
+}
+.inf .list ul{
+    background: rgb(205,217,219);
+
+
+}
+.inf .list ul .oli{
+    margin-top: 40px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bolder;
+    background-image: url(../img/sgn.png); 
+    background-size:35px;  
+    background-repeat: no-repeat;
+    background-position: 0px 8px;
+}
+.inf .list ul .mli,.fli{
+    margin-top: 40px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bolder;
+    background-image: url(../img/sgrr.png); 
+    background-size:35px;  
+    background-repeat: no-repeat;
+    background-position: 0px 8px;
+}
+
+
+.inf .new .jiao{
+    height:0px;
+    width: 0px;
+    position:absolute;
+    border:25px solid white  ;
+    border-top-color:white ;
+    border-right-color:white;
+    top:32px;
+    left:-22px;
+    transform:rotate(45deg);
+
+}
+.inf .new::before{
+    content:'';
+    position:absolute;
+    border:25px solid rgb(196,200,216) ;
+    top:32px;
+    left:-26px;
+    transform:rotate(45deg);
+
+}
+.j1,.j2,.j3{
+    width: 80%;
+    margin:0 auto;
+    border-bottom: double;
+    margin-top:20px;
+
+
+}
+.j3{padding-top:3px;}
+.j1,.j2,.j3 p{
+    word-wrap:break-word ;
+    word-break: break-all;
+    overflow: hidden;
+}
+
+.j1{height:220px;
+    
+}
+.j2{height:290px;
+}
+.j2 img{margin-right:30px;
+}
+.j3{height:190px;}
+.fenye{
+    position: absolute;
+    bottom: -8px;
+    right:150px;
+
+}
+.fenye ul{
+    height:100%;
+    list-style-type:none;
+}
+
+.fenye ul li{
+    line-height:40px;
+    float:left;
+}
+.page_btn{
+    border-radius:4px;
+    border:1px solid #e5e9ef;
+    background:#fff;
+    margin-right:10px;
+    text-align:center;
+    width:28px;
+    height:28px;
+    line-height: 28px;
+    margin-top:6px;
+    outline:0;
+}
+
+.page_btn:hover{
+    background: rgb(98,99,147);
+    color:#4f90fb;
+}
+
+.fenye span.pages_span{
+    margin-right:10px;
+    width:38px;
+    height:38px;
+    position:relative;
+    top:10px;
+}

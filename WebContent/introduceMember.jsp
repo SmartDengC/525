@@ -32,7 +32,7 @@
     <div class="nav">
         <div class="buttom">点击展开菜单</div>
        <ul id="nav">
-           <li><a href="">首页</a></li>
+           <li><a href="index.jsp">首页</a></li>
            <li><a href="">新闻与媒体</a>
                 <ul>
                 <li><a href="noticeInfo.jsp">公共信息</a></li>
@@ -69,7 +69,7 @@
             <li><a href="#">公共信息</a>
                 <ul>
                     <li><a href="">资源下载</a></li>
-                    <li><a href="">信息通知</a></li>
+                    
                     </ul>
             </li>
             <li><a href="#">人员介绍</a></li>
