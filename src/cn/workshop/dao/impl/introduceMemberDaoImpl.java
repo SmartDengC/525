@@ -67,7 +67,7 @@ public class introduceMemberDaoImpl implements introduceMember {
 
 
 	@Override
-	public Boolean addDownSource(String id) {
+	public Boolean addIntroduceMember(introduceMemberModel im) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -75,7 +75,7 @@ public class introduceMemberDaoImpl implements introduceMember {
 
 
 	@Override
-	public Boolean deleteDownSource(String id) {
+	public Boolean deleteIntroduceMember(String id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -83,10 +83,11 @@ public class introduceMemberDaoImpl implements introduceMember {
 
 
 	@Override
-	public Boolean modifyDownSource(String id) {
+	public Boolean modifyDownSource(introduceMemberModel im) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
 
 
 

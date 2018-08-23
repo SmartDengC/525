@@ -35,8 +35,8 @@
            <li><a href="index.jsp">首页</a></li>
            <li><a href="">新闻与媒体</a>
                 <ul>
-                <li><a href="noticeInfoServlet">公共信息</a></li>
-                <li><a href="downSourseServlet">资源下载</a></li>
+                <li><a href="noticeInfoServlet?action=s">公共信息</a></li>
+                <li><a href="downSourseServlet?action=s">资源下载</a></li>
                 <!--  <li><a href="">信息通知</a></li> -->
                 </ul>
            </li>
@@ -79,9 +79,9 @@
     <div class="footer">
         <div class="ffooter">
         <ul>
-            <li><a href="noticeInfoServlet">公共信息</a>
+            <li><a href="noticeInfoServlet?action=s">公共信息</a>
                 <ul>
-                    <li><a href="downSourseServlet">资源下载</a></li>
+                    <li><a href="downSourseServlet?action=s">资源下载</a></li>
                     
                     <!--<li><a href="">信息通知</a></li>
                     -->

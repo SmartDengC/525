@@ -37,8 +37,8 @@
            <li><a href="index.jsp" target="_self">首页</a></li>
            <li><a href="">新闻与媒体</a>
                 <ul>
-                <li><a href="noticeInfoServlet" target="_self">公共信息</a></li>
-                <li><a href="downSourseServlet" target="_self">资源下载</a></li>
+                <li><a href="noticeInfoServlet?action=s" target="_self">公共信息</a></li>
+                <li><a href="downSourseServlet?action=s" target="_self">资源下载</a></li>
                 </ul>
            </li>
            <li><a href="">师资队伍</a>
@@ -56,8 +56,8 @@
     </div>
     <div class="inf">
             <div class="list">
-                    <ul> <li class="oli"><a href="noticeInfoServlet" target="_self">公共信息</a></li></ul>
-                    <ul> <li class="mli"><a href="downSourseServlet" target="_self">资源下载</a></li></ul>
+                    <ul> <li class="oli"><a href="noticeInfoServlet?action=s" target="_self">公共信息</a></li></ul>
+                    <ul> <li class="mli"><a href="downSourseServlet?action=s" target="_self">资源下载</a></li></ul>
              </div>
     <div class="new">
         <div class="jiao"></div>
@@ -126,9 +126,9 @@
     <div class="footer">
         <div class="ffooter">
         <ul>
-            <li><a href="noticeInfoServlet" target="_self">公共信息</a>
+            <li><a href="noticeInfoServlet?action=s" target="_self">公共信息</a>
                 <ul>
-                    <li><a href="downSource.jsp" target="_self">资源下载</a></li>
+                    <li><a href="downSourceServlet?action=s" target="_self">资源下载</a></li>
                     </ul>
             </li>
             <li><a href="introduceMember.jsp">人员介绍</a></li>

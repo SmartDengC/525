@@ -1,14 +1,14 @@
 package cn.workshop.service.impl;
 
 import java.util.List;
-import cn.workshop.dao.downSource;
 import cn.workshop.dao.impl.downSourceDaoImpl;
 import cn.workshop.model.downSourceModel;
+import cn.workshop.service.downSourceControl;
 
-public class dowmSourseImpl implements downSource {
+public class dowmSourseImpl implements downSourceControl {
 
 	@Override
-	public List<downSourceModel> queryDownSource() {
+	public List<downSourceModel> getAllDownSource() {
 		// TODO Auto-generated method stub
 		List<downSourceModel> list=null;
 		downSourceDaoImpl dsl=new downSourceDaoImpl();
@@ -16,11 +16,14 @@ public class dowmSourseImpl implements downSource {
 		return list;
 	}
 
-	
-	
-	
 	@Override
-	public Boolean addDownSource(String id) {
+	public Boolean addDownSource(downSourceModel ds) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Boolean modifyDownSource(downSourceModel ds) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -31,11 +34,7 @@ public class dowmSourseImpl implements downSource {
 		return null;
 	}
 
-	@Override
-	public Boolean modifyDownSource(String id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+
 
 	
 

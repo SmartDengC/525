@@ -29,7 +29,6 @@ public class conn {
                 Statement statement = con.createStatement();//创建statement的对象
                 String sql = "select * from introducemember;";//我的数据表是》》
                 ResultSet resultSet = statement.executeQuery(sql);
-                String name;
           
                 String name1=null;
                 while (resultSet.next()) {

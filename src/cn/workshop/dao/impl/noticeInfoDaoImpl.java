@@ -53,22 +53,26 @@ public class noticeInfoDaoImpl implements noticeInfo {
 	}
 
 	@Override
-	public Boolean addDownSource(String id) {
+	public Boolean addNoticeinfo(noticeInfoModel ni) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Boolean deleteDownSource(String id) {
+	public Boolean deleteNoticeinfo(String id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Boolean modifyDownSource(String id) {
+	public Boolean modifyNoticeinfo(noticeInfoModel ni) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+
+
+
 
 
 	

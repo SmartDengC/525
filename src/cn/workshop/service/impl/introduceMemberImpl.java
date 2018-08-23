@@ -2,14 +2,15 @@ package cn.workshop.service.impl;
 
 import java.util.List;
 
-import cn.workshop.dao.introduceMember;
 import cn.workshop.dao.impl.introduceMemberDaoImpl;
 import cn.workshop.model.introduceMemberModel;
+import cn.workshop.service.introduceMemberControl;
 
-public class introduceMemberImpl implements introduceMember {
+public class introduceMemberImpl implements introduceMemberControl {
+
 
 	@Override
-	public List<introduceMemberModel> introduceMember() {
+	public List<introduceMemberModel> getAllIntroduceMenber() {
 		// TODO Auto-generated method stub
 		List<introduceMemberModel> list=null;
 		introduceMemberDaoImpl imdi=new introduceMemberDaoImpl();
@@ -17,28 +18,24 @@ public class introduceMemberImpl implements introduceMember {
 		return list;
 	}
 
-	
-	//dao层创建时添加的接口方法
-	
-	
-	
 	@Override
-	public Boolean addDownSource(String id) {
+	public Boolean addIntroduceMember(introduceMemberModel im) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Boolean deleteDownSource(String id) {
+	public Boolean deleteIntroduceMember(String id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Boolean modifyDownSource(String id) {
+	public Boolean modifyIntroduceMember(introduceMemberModel im) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
 
 	
 	

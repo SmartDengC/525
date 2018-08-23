@@ -8,7 +8,7 @@ public class introduceMemberModel {
 	private String pictureUrl;//图片位置
 	private String contactInformation;
 	private String key;//角色标记
-	public introduceMemberModel(){};
+	public introduceMemberModel(){};	
 	public String getId() {
 		return id;
 	}

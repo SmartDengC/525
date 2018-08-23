@@ -11,24 +11,24 @@ public interface noticeInfo {
 	 * @return list集合
 	 * @param
 	 */
-	List<noticeInfoModel> queryNoticeInfo();
+	public List<noticeInfoModel> queryNoticeInfo();
 	 
 		/**
 		 * 对数据库表noticeinfo中数据的增加 
 		 */
-		 Boolean addDownSource(String id);
+	public Boolean addNoticeinfo(noticeInfoModel ni);
 		
 		/**
 		 * 对数据库表noticeinfo中数据的删除
 		 * 判断条件 使用ID
 		 */
 		
-		Boolean  deleteDownSource(String id);
+	public Boolean  deleteNoticeinfo(String id);
 		/**
 		 * 数据库表noticeinfo的修改
 		 * 判断条件ID
 		 */
-		Boolean modifyDownSource(String id);
+	public Boolean modifyNoticeinfo(noticeInfoModel ni);
 	 
 	 
 	

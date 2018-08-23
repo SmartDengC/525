@@ -8,7 +8,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import cn.workshop.dao.downSource;
 import cn.workshop.model.downSourceModel;
 import cn.workshop.service.impl.dowmSourseImpl;
 
@@ -41,9 +40,29 @@ public class downSourseServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		dowmSourseImpl dsi=new dowmSourseImpl();
-		List<downSourceModel> list=dsi.queryDownSource();
-		request.setAttribute("dowmSourse", list);
-		request.getRequestDispatcher("/downSource.jsp").forward(request,response);		
+		if(request.getParameter("action").equals("a"))
+		{
+			downSourceModel ds=new downSourceModel();
+			ds.setIntroduce(request.getParameter("introduce"));
+			ds.setTime(request.getParameter("time"));
+			ds.setUrl(request.getParameter("url"));
+			ds.setPictureUrl("01.jpg");
+			
+		}
+		else if(request.getParameter("action").equals("d"))
+		{
+			
+		}
+		else if(request.getParameter("action").equals("s"))
+		{
+			dowmSourseImpl dsi=new dowmSourseImpl();
+			List<downSourceModel> list=dsi.getAllDownSource();
+			request.setAttribute("dowmSourse", list);
+			request.getRequestDispatcher("/downSource.jsp").forward(request,response);
+		}
+		else if(request.getParameter("action").equals("u"))
+		{
+			
+		}
 	}
 }

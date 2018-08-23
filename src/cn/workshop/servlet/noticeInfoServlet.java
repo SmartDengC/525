@@ -8,8 +8,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import cn.workshop.dao.noticeInfo;
 import cn.workshop.model.noticeInfoModel;
 import cn.workshop.service.impl.noticeInfoImpl;
 
@@ -45,8 +43,7 @@ public class noticeInfoServlet extends HttpServlet {
 		//doGet(request, response);
 		List<noticeInfoModel>list=null;
 		noticeInfoImpl nii=new noticeInfoImpl();
-		list=nii.queryNoticeInfo();
-		
+		list=nii.getAllNoticeInfo();		
 		request.setAttribute("noticeInfo", list);
 		request.getRequestDispatcher("/noticeInfo.jsp").forward(request, response);
 	}

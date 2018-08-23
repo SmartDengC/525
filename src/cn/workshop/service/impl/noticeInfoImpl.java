@@ -2,44 +2,40 @@ package cn.workshop.service.impl;
 
 import java.util.List;
 
-import cn.workshop.dao.noticeInfo;
 import cn.workshop.dao.impl.noticeInfoDaoImpl;
 import cn.workshop.model.noticeInfoModel;
+import cn.workshop.service.noticeInfoControl;
 
-public class noticeInfoImpl implements noticeInfo {
+public class noticeInfoImpl implements noticeInfoControl {
 
 	@Override
-	public List<noticeInfoModel> queryNoticeInfo() {
+	public List<noticeInfoModel> getAllNoticeInfo() {
 		// TODO Auto-generated method stub
 		//提取通知消息的前五条
 		
 		
 		
-		List<noticeInfoModel> list=null;
-		
-		noticeInfoDaoImpl nidi=new noticeInfoDaoImpl();
-		list=nidi.queryNoticeInfo();
-		return list;
+				List<noticeInfoModel> list=null;
+				
+				noticeInfoDaoImpl nidi=new noticeInfoDaoImpl();
+				list=nidi.queryNoticeInfo();
+				return list;
 	}
 
-	
-	//dao层创建时添加的接口方法
-	
-	
 	@Override
-	public Boolean addDownSource(String id) {
+	public Boolean addNoticeinfo(noticeInfoModel ni) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Boolean deleteDownSource(String id) {
+	public Boolean deleteNoticeinfo(String id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Boolean modifyDownSource(String id) {
+	public Boolean modifyNoticeinfo(noticeInfoModel ni) {
 		// TODO Auto-generated method stub
 		return null;
 	}
