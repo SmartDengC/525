@@ -16,7 +16,7 @@ public interface introduceMember {
 	/**
 	 * 对数据库表introduceMemberModel中数据的增加 
 	 */
-	List<introduceMemberModel> addDownSource(String id);
+	Boolean addDownSource(String id);
 	
 	/**
 	 * 对数据库表introduceMemberModel中数据的删除

@@ -22,10 +22,11 @@ public class noticeInfoImpl implements noticeInfo {
 	}
 
 	
+	//dao层创建时添加的接口方法
 	
-	//以下是添加dao层时添加的unimplent method（意思就是 没有添加的接口方法）
+	
 	@Override
-	public List<noticeInfoModel> addDownSource(String id) {
+	public Boolean addDownSource(String id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -41,5 +42,9 @@ public class noticeInfoImpl implements noticeInfo {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	
+	
+
 
 }

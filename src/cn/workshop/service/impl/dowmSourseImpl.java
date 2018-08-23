@@ -16,8 +16,11 @@ public class dowmSourseImpl implements downSource {
 		return list;
 	}
 
+	
+	
+	
 	@Override
-	public List<downSourceModel> addDownSource(String id) {
+	public Boolean addDownSource(String id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -33,5 +36,7 @@ public class dowmSourseImpl implements downSource {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	
 
 }

@@ -53,7 +53,7 @@ public class noticeInfoDaoImpl implements noticeInfo {
 	}
 
 	@Override
-	public List<noticeInfoModel> addDownSource(String id) {
+	public Boolean addDownSource(String id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -69,7 +69,8 @@ public class noticeInfoDaoImpl implements noticeInfo {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
+
+
 	
 
 }

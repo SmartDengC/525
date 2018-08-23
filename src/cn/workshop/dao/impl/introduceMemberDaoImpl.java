@@ -67,7 +67,7 @@ public class introduceMemberDaoImpl implements introduceMember {
 
 
 	@Override
-	public List<introduceMemberModel> addDownSource(String id) {
+	public Boolean addDownSource(String id) {
 		// TODO Auto-generated method stub
 		return null;
 	}

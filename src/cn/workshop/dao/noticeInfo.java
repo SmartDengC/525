@@ -11,12 +11,12 @@ public interface noticeInfo {
 	 * @return list集合
 	 * @param
 	 */
-	 List<noticeInfoModel> queryNoticeInfo();
+	List<noticeInfoModel> queryNoticeInfo();
 	 
 		/**
 		 * 对数据库表noticeinfo中数据的增加 
 		 */
-		List<noticeInfoModel> addDownSource(String id);
+		 Boolean addDownSource(String id);
 		
 		/**
 		 * 对数据库表noticeinfo中数据的删除

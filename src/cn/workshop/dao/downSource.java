@@ -14,7 +14,7 @@ public interface downSource {
 	/**
 	 * 对数据库表downsource中数据的增加 
 	 */
-	List<downSourceModel> addDownSource(String id);
+	Boolean addDownSource(String id);
 	
 	/**
 	 * 对数据库表downsource中数据的删除

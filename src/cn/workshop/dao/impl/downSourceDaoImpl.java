@@ -58,7 +58,7 @@ public class downSourceDaoImpl implements downSource {
 	//以下是添加dao层时添加的unimplent method（意思就是 没有添加的接口方法）
 
 	@Override
-	public List<downSourceModel> addDownSource(String id) {
+	public Boolean addDownSource(String id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
