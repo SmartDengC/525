@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+<%@ page import="cn.workshop.model.downSourceModel,java.util.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
@@ -37,7 +38,7 @@
            <li><a href="">新闻与媒体</a>
                 <ul>
                 <li><a href="noticeInfoServlet" target="_self">公共信息</a></li>
-                <li><a href="downSource.jsp" target="_self">资源下载</a></li>
+                <li><a href="downSourseServlet" target="_self">资源下载</a></li>
                 </ul>
            </li>
            <li><a href="">师资队伍</a>
@@ -56,7 +57,7 @@
     <div class="inf">
             <div class="list">
                     <ul> <li class="oli"><a href="noticeInfoServlet" target="_self">公共信息</a></li></ul>
-                    <ul> <li class="mli"><a href="downSource.jsp" target="_self">资源下载</a></li></ul>
+                    <ul> <li class="mli"><a href="downSourseServlet" target="_self">资源下载</a></li></ul>
              </div>
     <div class="new">
         <div class="jiao"></div>
@@ -71,49 +72,34 @@
         </div>
             <div class="j2">
                 <h1>优质网站</h1>
-                <div class="gi"> 
+                 
+                        <%
+                        downSourceModel ds=null;
+                        List<downSourceModel> list=(List<downSourceModel>)request.getAttribute("dowmSourse");
+                        if(list!=null)
+             	       {
+             	    	   Iterator<downSourceModel> iter=list.iterator();
+             	    	   while(iter.hasNext())
+             	    	   {
+             	    		  ds=(downSourceModel)iter.next();
+                        %> 
+                        <div >      
                         <div>
-                                    <ul class="ogi">
-                                            <li class="bli">github</li>
-                                            <li class="grayli">(程序员的托儿所)</li>                  
+                                    <ul >
+                                            <li class="bli"><%=ds.getName() %></li>
+                                            <li class="grayli"><%=ds.getTime() %></li>                                                             
                                    </ul>
-                                     <img src="./img/logo4.png">
+                                   <p><%=ds.getIntroduce() %></p> 
+                                     <!-- <img src="./img/"> -->
                         </div>
-                        <p><a href="https://github.com/">https://github.com/</a></p> 
-                </div>
-            <div class="ir"> 
-                       <div> 
-                                    <img src="./img/logo7.png">
-                                    <ul class="oir">
-                                          <li class="bli">爱软客</li>
-                                          <li class="grayli">(万能软件下载)</li>
-                                    </ul> 
-                        </div>
-                      <p><a href="http://www.bokeboke.net/">http://www.bokeboke.net/</a></p> 
-                </div>
-            
-            <div class="cs" >
-                        <div>
-                                <img src="./img/logo2.png">
-                                     <ul class="ocs">
-                                         <li class="bli">CSDN</li>
-                                         <li class="grayli">(博客社区)</li>
-                                     </ul>
-                                    
-                       </div>
-                        <p><a href="https://www.csdn.net/">https://www.csdn.net/</a></p> 
-              </div> 
-              <div class="im" >
-                    <div>
-                            <img src="./img/logo1.png">
-                                 <ul class="oim">
-                                     <li class="bli">imooc</li>
-                                     <li class="grayli">(IT自学网站)</li>
-                                 </ul>
-                                
-                   </div>
-                    <p><a href="https://www.imooc.com/">https://www.imooc.com/</a></p> 
-          </div> 
+                        <p><a href=<%=ds.getUrl() %>>资源地址</a></p>
+                         </div>
+                        <%
+             	    	   }
+             	       }
+                        %>
+                        
+                
           </div>
              <div class="j3">
                     <h1>经典文章</h1>
@@ -140,13 +126,13 @@
     <div class="footer">
         <div class="ffooter">
         <ul>
-            <li><a href="noticeInfo.jsp" target="_self">公共信息</a>
+            <li><a href="noticeInfoServlet" target="_self">公共信息</a>
                 <ul>
                     <li><a href="downSource.jsp" target="_self">资源下载</a></li>
                     </ul>
             </li>
             <li><a href="introduceMember.jsp">人员介绍</a></li>
-            <li><a href="contactUs.jsp">办事咨询</a></li>
+            <li><a href="downSourseServlet">办事咨询</a></li>
         </ul>
      </div>
     </div>

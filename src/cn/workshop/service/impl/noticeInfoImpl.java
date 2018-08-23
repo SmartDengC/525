@@ -16,6 +16,7 @@ public class noticeInfoImpl implements noticeInfo {
 		
 		
 		List<noticeInfoModel> list=null;
+		
 		noticeInfoDaoImpl nidi=new noticeInfoDaoImpl();
 		list=nidi.queryNoticeInfo();
 		return list;

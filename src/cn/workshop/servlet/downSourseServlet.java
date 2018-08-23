@@ -44,6 +44,6 @@ public class downSourseServlet extends HttpServlet {
 		dowmSourseImpl dsi=new dowmSourseImpl();
 		List<downSourceModel> list=dsi.queryDownSource();
 		request.setAttribute("dowmSourse", list);
-		request.getRequestDispatcher("/downSourse.jsp").forward(request,response);		
+		request.getRequestDispatcher("/downSource.jsp").forward(request,response);		
 	}
 }

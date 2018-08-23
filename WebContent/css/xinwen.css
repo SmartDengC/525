@@ -1,6 +1,6 @@
 .inf{width :70%;
   margin: 0 auto;
-  height:850px;;
+  height:850px;
   background: rgb(205,216,248);
   position: relative;
 }
@@ -89,20 +89,18 @@
 
 }
 .j3{padding-top:3px;}
+
 .j1,.j2,.j3 p{
     word-wrap:break-word ;
     word-break: break-all;
     overflow: hidden;
 }
 
-.j1{height:220px;
-    
-}
-.j2{height:290px;
-}
+
+
 .j2 img{margin-right:30px;
 }
-.j3{height:190px;}
+
 .fenye{
     position: absolute;
     bottom: -8px;
