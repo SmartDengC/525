@@ -51,6 +51,24 @@ public class noticeInfoDaoImpl implements noticeInfo {
 		
 		return list;
 	}
+
+	@Override
+	public List<noticeInfoModel> addDownSource(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Boolean deleteDownSource(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Boolean modifyDownSource(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 

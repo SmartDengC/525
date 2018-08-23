@@ -16,4 +16,22 @@ public class dowmSourseImpl implements downSource {
 		return list;
 	}
 
+	@Override
+	public List<downSourceModel> addDownSource(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Boolean deleteDownSource(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Boolean modifyDownSource(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

@@ -17,4 +17,22 @@ public class introduceMemberImpl implements introduceMember {
 		return list;
 	}
 
+	@Override
+	public List<introduceMemberModel> addDownSource(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Boolean deleteDownSource(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Boolean modifyDownSource(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

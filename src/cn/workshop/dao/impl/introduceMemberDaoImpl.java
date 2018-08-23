@@ -50,8 +50,9 @@ public class introduceMemberDaoImpl implements introduceMember {
 		return list;
 	}
 	
+
+	
 	//²âÊÔÖ÷º¯Êý
-	/**
 	public static void main(String[] args) {
 		introduceMember i=new introduceMemberDaoImpl();
 		List<introduceMemberModel> list= new ArrayList<introduceMemberModel>();
@@ -62,7 +63,31 @@ public class introduceMemberDaoImpl implements introduceMember {
 		}
 			
 		}
-	*/
+
+
+
+	@Override
+	public List<introduceMemberModel> addDownSource(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+	@Override
+	public Boolean deleteDownSource(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+	@Override
+	public Boolean modifyDownSource(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 
 }
