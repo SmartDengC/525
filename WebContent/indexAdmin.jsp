@@ -21,7 +21,8 @@
        <form class="search"  method="get" >
         <input class="sinput" type="text" name="s" /> 
         <input class="sbtn" type="submit" value=""/>       
-    </form>    
+    </form> 
+    <a class="dlq" href="loginOrQuitServlet?action=quit">退出</a>   
 </div>
    
    
@@ -32,20 +33,20 @@
         <div class="buttom">点击展开菜单</div>
        <ul id="nav">
            <li><a href="indexServlet" target="_self">首页</a></li>
-           <li><a href="">新闻与媒体</a>
+           <li><a >新闻与媒体</a>
                 <ul>
                 <li><a href="noticeInfoServlet" target="_self">公共信息</a></li>
                 <li><a href="downSourseServlet" target="_self">资源下载</a></li>
                 </ul>
            </li>
-           <li><a href="">师资队伍</a>
+           <li><a >师资队伍</a>
                 <ul>
                 <li><a href="introduceMemberServlet" target="_self">人员介绍</a></li>
                 </ul>
             </li>
-           <li><a href="">联系我们</a>
+           <li><a >联系我们</a>
                 <ul>
-                <li><a href="contact.jsp" target="_self">办事咨询</a></li>
+                <li><a href="contactServlet" target="_self">办事咨询</a></li>
                 </ul>
            </li>
            </ul>
@@ -83,7 +84,7 @@
                     </ul>
             </li>
             <li><a href="introduceMemberServlet" target="_self">人员介绍</a></li>
-            <li><a href="contact.jsp" target="_self">办事咨询</a></li>
+            <li><a href="contactServlet" target="_self">办事咨询</a></li>
         </ul>
     </div>
     </div>

@@ -12,14 +12,14 @@ import cn.workshop.service.impl.loginImpl;
 /**
  * Servlet implementation class login
  */
-@WebServlet("/loginServlet")
-public class loginServlet extends HttpServlet {
+@WebServlet("/loginOrQuitServlet")
+public class loginOrQuitServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public loginServlet() {
+    public loginOrQuitServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -37,6 +37,9 @@ public class loginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		String action=request.getParameter("action");
+		if(action!=null && action.equals("login"))
+		{
 			String name=null,password=null;
 			name=request.getParameter("name");
 			password=request.getParameter("password");
@@ -51,6 +54,17 @@ public class loginServlet extends HttpServlet {
 			{
 				response.sendRedirect("login.jsp");
 			}
+		}
+		else if(action.equals("quit"))
+		{
+			request.getSession().invalidate();
+			request.getRequestDispatcher("/indexServlet").forward(request, response);
+		}
+		else
+		{
+			response.sendRedirect("login.jsp");
+		}
+			
 	}
 
 }

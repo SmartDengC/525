@@ -7,15 +7,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-@WebServlet("/indexServlet")
-public class indexServlet extends HttpServlet {
+/**
+ * Servlet implementation class contact
+ */
+@WebServlet("/contactServlet")
+public class contactSverlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public indexServlet() {
+    public contactSverlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -25,7 +27,7 @@ public class indexServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doPost(request, response);
+		doPost(request,response);
 	}
 
 	/**
@@ -33,13 +35,13 @@ public class indexServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		if(request.getSession().getAttribute("admin")!=null && request.getSession().getAttribute("admin").equals("admin"))
+		if(request.getSession().getAttribute("admin")!=null && request.getSession().getAttribute("admin")=="admin")
 		{
-			request.getRequestDispatcher("indexAdmin.jsp").forward(request, response);
+			request.getRequestDispatcher("/contactAdmin.jsp").forward(request, response);
 		}
 		else
 		{
-			request.getRequestDispatcher("index.jsp").forward(request, response);
+			request.getRequestDispatcher("/contact.jsp").forward(request, response);
 		}
 	}
 

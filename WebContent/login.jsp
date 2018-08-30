@@ -30,7 +30,7 @@
     <div class="back" >    
             <div class="bback">
                    <div class="denglu">
-                    <form class="m-t" role="form" action="loginServlet" method="post">                                                         
+                    <form class="m-t" role="form" action="loginOrQuitServlet?action=login" method="post">                                                         
                             <div class="form-group">
                             账号:<input type="text" class="form-control" name="name" placeholder="请输入账号" required="">
                             </div>
