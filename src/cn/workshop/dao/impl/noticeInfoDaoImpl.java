@@ -54,20 +54,58 @@ public class noticeInfoDaoImpl implements noticeInfo {
 
 	@Override
 	public Boolean addNoticeinfo(noticeInfoModel ni) {
-		// TODO Auto-generated method stub
-		return null;
+		DButils conn=new DButils();
+		Connection connection =conn.DBcon();
+		Statement statement =conn.DBstatement(connection);
+		String sql="INSERT INTO NOTICEINFO (title,time,text,pictureUrl) VALUES ('"+ni.getTitle()+"','"+ni.getTime()+"','"+ni.getText()+"','"+ni.getPictureUrl()+"');";
+		try {
+			int  i=statement.executeUpdate(sql);
+			statement.close();
+			connection.close();
+			return true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return false;
 	}
 
 	@Override
 	public Boolean deleteNoticeinfo(String id) {
-		// TODO Auto-generated method stub
-		return null;
+		DButils conn=new DButils();
+		Connection connection =conn.DBcon();
+		Statement statement=conn.DBstatement(connection);
+		String sql="DELETE FROM NOTICEINFO WHERE ID="+id+";";
+		try {
+			int resultset=statement.executeUpdate(sql);
+			statement.close();
+			connection.close();
+			return true;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return false;
 	}
 
 	@Override
 	public Boolean modifyNoticeinfo(noticeInfoModel ni) {
-		// TODO Auto-generated method stub
-		return null;
+		DButils conn=new DButils();
+		Connection connection =conn.DBcon();
+		Statement statement =conn.DBstatement(connection);
+		String sql="UPDATE NOTICEINFO  SET title='"+ni.getTitle()+"',time='"+ni.getTime()+"',text='"+ni.getText()+"',pictureUrl='"+ni.getPictureUrl()+"' WHERE ID="+ni.getId()+";";
+		try {
+			statement.execute(sql);
+			statement.close();
+			connection.close();
+			return true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return false;
 	}
 
 

@@ -68,24 +68,64 @@ public class introduceMemberDaoImpl implements introduceMember {
 
 	@Override
 	public Boolean addIntroduceMember(introduceMemberModel im) {
-		// TODO Auto-generated method stub
-		return null;
+		DButils conn =new DButils();
+		Connection connection  = conn.DBcon();
+		Statement statement =conn.DBstatement(connection);
+		String sql="INSERT INTO INTRODUCEMEMBER (NAME,DUTY,INTRODUCE,PICTUREURL,CONTACTINFORMATION,`KEY`)"
+				+ " VALUES ('"+im.getName()+"','"+im.getDuty()+"','"
+		+im.getIntroduce()+"','"+im.getPictureUrl()+"','"+im.getContactInformation()+"','"+im.getKey()+"');";
+		try {
+			int resultset=statement.executeUpdate(sql);
+			statement.close();
+			connection.close();
+			return true;
+		} catch (SQLException e) {
+			//e.printStackTrace();
+			System.out.println(e);
+		}
+		return false;
 	}
 
 
 
 	@Override
 	public Boolean deleteIntroduceMember(String id) {
-		// TODO Auto-generated method stub
-		return null;
+		DButils conn=new DButils();
+		Connection connection =conn.DBcon();
+		Statement statement =conn.DBstatement(connection);
+		String sql="DELETE FROM INTRODUCEMEMBER WHERE ID="+id+";";
+		try {
+			int resultset=statement.executeUpdate(sql);
+			statement.close();
+			connection.close();
+			return true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
 	}
 
 
 
 	@Override
 	public Boolean modifyDownSource(introduceMemberModel im) {
-		// TODO Auto-generated method stub
-		return null;
+		DButils conn=new DButils();
+		Connection connection = conn.DBcon();
+		Statement statement =conn.DBstatement(connection);
+		String sql="UPDATE INTRODUCEMEMBER SET NAME='"+im.getName()+"',duty='"+im.getDuty()+"',introduce='"+im.getIntroduce()+"',pictureUrl='"
+				+im.getPictureUrl()+"',contactInformation='"+im.getContactInformation()+"',`key`='"+im.getKey()+"' where id="+im.getId()+";";
+		try {
+			statement.execute(sql);
+			statement.close();
+			connection.close();
+			return true;
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
 	}
 
 

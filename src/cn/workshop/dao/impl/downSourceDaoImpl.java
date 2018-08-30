@@ -58,22 +58,69 @@ public class downSourceDaoImpl implements downSource {
 	//以下是添加dao层时添加的unimplent method（意思就是 没有添加的接口方法）
 	@Override
 	public Boolean addDownSource(downSourceModel ds) {
-		// TODO Auto-generated method stub
-		return null;
+		DButils conn=new DButils();
+		Connection connection=conn.DBcon();
+		//Statement statement=conn.DBstatement(connection);
+		String sql="INSERT INTO DOWNSOURCE (NAME,INTRODUCE,TIME,URL,PICTUREURL) VALUES('"+ds.getName()+"','"+ds.getIntroduce()+"','"+ds.getTime()+"','"+ds.getUrl()+"','"+ds.getPictureUrl()+"');";
+		Statement statement;
+		statement=conn.DBstatement(connection);
+		try {
+			int resultset;
+			resultset=statement.executeUpdate(sql);
+			statement.close();
+			connection.close();
+			return true;
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e);
+			//e.printStackTrace();
+		}
+		
+		return false;
 	}
 
 
 	@Override
 	public Boolean deleteDownSource(String id) {
-		// TODO Auto-generated method stub
-		return null;
+		DButils conn=new DButils();
+		Connection connection=conn.DBcon();
+		Statement statement=conn.DBstatement(connection);
+		String sql="DELETE FROM DOWNSOURCE WHERE ID="+id+";";
+		try {
+			int resultset=statement.executeUpdate(sql);
+			statement.close();
+			connection.close();
+			//conn.closeDBCon(connection, statement, resultset);
+			return true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
 	}
 
 
 	@Override
 	public Boolean modifyDownSource(downSourceModel ds) {
-		// TODO Auto-generated method stub
-		return null;
+		DButils conn=new DButils();
+		Connection connection =conn.DBcon();
+		Statement statement =conn.DBstatement(connection);
+		String sql="UPDATE DOWNSOURCE SET NAME='"+ds.getName()+"',introduce='"+ds.getIntroduce()+"',time='"+ds.getTime()+"',url='"
+				+ds.getUrl()+"',pictureUrl='"+ds.getPictureUrl()+"' where id="+ds.getId()+ ";";
+		try {
+			
+			statement.execute(sql);
+			
+			statement.close();
+			connection.close();
+			return true;
+			
+		} catch (SQLException e) {
+			System.out.println(e);
+			//e.printStackTrace();
+		}
+		return false;
 	}
 
 	
