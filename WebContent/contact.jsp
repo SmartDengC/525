@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="官网">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/xinwen.css">
+    <link rel="stylesheet" href="./css/lianxi.css">
     <title>工作室网站</title>
 </head>
 <body>
@@ -25,8 +25,8 @@
         
     </form>
     <a class="dlq" href="login.jsp">登录</a>
-</div>
 
+</div>
    
 
 </div>
@@ -52,45 +52,50 @@
                 </ul>
            </li>
            </ul>
-
     </div>
-    <div class="inf">
-        <div class="list">
-                        <ul> <li class="oli"><a href="gonggong.html" target="_self">公共信息</a></li></ul>
-                        <ul> <li class="mli"><a href="ziyuan.html" target="_self">资源下载</a></li></ul>
-
-        </div>
-        <div class="new">
-            <div class="jiao"></div>
-            <div class="j1">
-                <h4 >[重要事的标题]</h4><h4 class="time">时间</h4>
-                <p>&nbsp;&nbsp;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+    <div class="back" >    
+         <div class="bback">
+              <div class="zikuai">
+                  <div class="sanjiao"></div>
+                  <div class="xuxian"></div>
+                  <ul><li class="bangong">办公地点</li></ul>
             </div>
-            <div class="j1">
-                    <h4>[新闻之类的标题]</h4><h4 class="time">时间</h4>
-                <p>&nbsp;&nbsp;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-              
+
+            <div class="bjs">
+                <div class="bjs1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;成都大学信息科学与工程学院第10栋教学楼5楼525智能信息系统工作室。</div><img src="./img/l2.png"></p>
             </div>
-            <div class="j1">
-                    <h4>[这个就是可看可不看不重要的]</h4><h4 class="time">时间</h4>
-                    <p>&nbsp;&nbsp;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
 
+            <div class="zikuai2">
+                <div class="sanjiao2"></div>
             </div>
-            <div class="j1">
-                <h4>[这个就是可看可不看不重要的]</h4><h4 class="time">时间</h4>
-                <p>&nbsp;&nbsp;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+            <div class="zikuai3">
+                    <div class="sanjiao3"></div>
+                    <div class="xuxiant"></div>
+                    <ul><li class="guanli">管理人员</li></ul>
+                </div>
+         </div>
+    </div>
+    <div class="fback"  >
+            <p class="teacher">指导老师：<span>于曦老师</span></br>（成都大学信息工学与工程学院副院长）</p>
+            <ul class="fz">
+                <li>技术顾问：张梓潼</li>
+                <li>日常管理：熊红</li>
+                <li>技术顾问：朱洪超</li>
+            </ul>
+            <ul class="call">
+                  <li>邮箱：2389208027@qq.com</li>
+                  <li>电话 ：13540823418</li>
+                  <li>邮箱：2192154237@qq.com</li>
+                  <li>电话：</li>
+                  <li>邮箱：zhuerchaochaol@qq.com</li>
+                  <li>电话：</li>
+              </ul>
+              <div class="zikuai4">
+                    <div class="sanjiao4"></div>
+                </div>
 
-           </div>
-           <div class="j1">
-            <h4>[这个就是可看可不看不重要的]</h4><h4 class="time">时间</h4>
-            <p>&nbsp;&nbsp;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-
-          </div>
-       </div>
-      
-   </div>
-
-   <div class="onfooter">
+    </div >  
+    <div class="onfooter">
         <ul>
             <li>新闻媒体</li>
             <li>师资队伍</li>
@@ -110,7 +115,5 @@
         </ul>
     </div>
     </div>
-
-    
 </body>
 </html>

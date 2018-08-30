@@ -21,7 +21,14 @@ public class introduceMemberImpl implements introduceMemberControl {
 	@Override
 	public Boolean addIntroduceMember(introduceMemberModel im) {
 		// TODO Auto-generated method stub
-		return null;
+		if(new introduceMemberDaoImpl().addIntroduceMember(im))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 
 	@Override

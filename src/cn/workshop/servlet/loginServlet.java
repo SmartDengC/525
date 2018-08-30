@@ -12,7 +12,7 @@ import cn.workshop.service.impl.loginImpl;
 /**
  * Servlet implementation class login
  */
-@WebServlet("/login")
+@WebServlet("/loginServlet")
 public class loginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -37,25 +37,20 @@ public class loginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String name=null,password=null;
-		if(request.getParameter("name")!=null && request.getParameter("name")!=null)
-		{
+			String name=null,password=null;
 			name=request.getParameter("name");
 			password=request.getParameter("password");
 			loginImpl ll=new loginImpl();
 			if(ll.logindeal(name, password))
 			{
-				request.getRequestDispatcher("").forward(request, response);
+				request.getSession().setAttribute("admin", "admin");
+				request.getSession().setMaxInactiveInterval(10);
+				request.getRequestDispatcher("/indexServlet").forward(request, response);
 			}
 			else
 			{
 				response.sendRedirect("login.jsp");
 			}
-		}
-		else
-		{
-			response.sendRedirect("login.jsp");
-		}
 	}
 
 }

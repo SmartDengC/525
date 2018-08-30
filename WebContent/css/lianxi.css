@@ -1,0 +1,86 @@
+
+.fback{
+    width:70%;background:rgba(216,223,249,0.7);height:500px;margin:0 auto;
+}
+.back{
+    background: url('../img/l1.png') no-repeat;
+    background-size: cover;
+    width: 70%;
+    height: 600px;
+    position: relative;
+    margin:0 auto;
+    
+}
+.bback{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 600px;
+    line-height: 50px;
+    text-align: center;
+    background:rgba(216,223,249,0.7);
+}
+.zikuai{background:rgb(98,99,147);width:20%;height: 20px;position: relative;margin:80px 0 0 0;}
+.sanjiao{    
+    width:0;
+    height:0;
+    border-width:0 0 20px 20px;
+    border-style:solid;
+    border-color:transparent transparent transparent rgb(98,99,147);
+    position: absolute;
+    left:100%; 
+    
+}
+.xuxian{width:250%;height:20px;border-bottom: dashed 6px white;position: absolute;left:120%;}
+.bangong{position: absolute;width:60%;height: 20px;font-size: 24px;color: gray;font-weight: bold;left:400%}
+.bjs{position: relative;margin: 0 auto;width: 70%;}
+.bjs .bjs1{width:200px;height:150px ;position: absolute;left:70px;font-weight: bold;top:70px;}
+.bjs  img{width:380px;height:240px ;position: absolute;right:70px;top:70px;}
+.zikuai2{background:rgb(98,99,147);width:20%;height: 20px;position: relative;margin:340px 0 0 0;position: absolute;right:0px;}
+.sanjiao2{    
+    width:0;
+    height:0;
+    border-width:0 20px 20px 0px;
+    border-style:solid;
+    border-color:transparent rgb(98,99,147) transparent rgb(98,99,147);
+    position: absolute;
+    right:100%; 
+    
+}
+.zikuai3{background:rgb(98,99,147);width:20%;height: 20px;position: relative;margin-top: 49%;}
+.sanjiao3{    
+    width:0;
+    height:0;
+    border-width:0 0 20px 20px;
+    border-style:solid;
+    border-color:transparent transparent transparent rgb(98,99,147);
+    position: absolute;
+    left:100%; 
+    
+}
+.xuxiant{width:250%;height:20px;border-bottom: dashed 6px rgb(98,99,147);position: absolute;left:120%;}
+.guanli{position: absolute;width:60%;height: 20px;font-size: 24px;color: gray;font-weight: bold;left:400%}
+.fback{position: relative;padding-top:70px;}
+.teacher{width:380px;margin: 0 auto;font-size:20px;}
+.teacher span{font-size:25px;}
+.fz{position: absolute;left:240px;list-style: none;font-size:20px;}
+.fz li{margin-bottom: 66px;}
+.call{position: absolute;right:240px;list-style: none;font-size:20px;}
+.call li{margin-bottom: 20px;}
+.zikuai4{background:rgb(181,187,219);width:20%;height: 20px;position: relative;margin:340px 0 0 0;position: absolute;right:0px;}
+.sanjiao4{    
+    width:0;
+    height:0;
+    border-width:0 20px 20px 0px;
+    border-style:solid;
+    border-color:transparent rgb(181,187,219) transparent rgb(181,187,219);
+    position: absolute;
+    right:100%; 
+    
+}
+
+
+

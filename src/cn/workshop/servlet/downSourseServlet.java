@@ -40,29 +40,42 @@ public class downSourseServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		if(request.getParameter("action").equals("a"))
+		
+		dowmSourseImpl dsi=new dowmSourseImpl();
+		List<downSourceModel> list=dsi.getAllDownSource();
+		request.setAttribute("dowmSourse", list);
+		if(request.getSession().getAttribute("admin")!=null && request.getSession().getAttribute("admin")=="admin")
 		{
-			downSourceModel ds=new downSourceModel();
-			ds.setIntroduce(request.getParameter("introduce"));
-			ds.setTime(request.getParameter("time"));
-			ds.setUrl(request.getParameter("url"));
-			ds.setPictureUrl("01.jpg");
-			
+			request.getRequestDispatcher("/downSourceAdmin.jsp").forward(request, response);
 		}
-		else if(request.getParameter("action").equals("d"))
+		else
 		{
-			
+			request.getRequestDispatcher("/downSource.jsp").forward(request, response);
 		}
-		else if(request.getParameter("action").equals("s"))
-		{
-			dowmSourseImpl dsi=new dowmSourseImpl();
-			List<downSourceModel> list=dsi.getAllDownSource();
-			request.setAttribute("dowmSourse", list);
-			request.getRequestDispatcher("/downSource.jsp").forward(request,response);
-		}
-		else if(request.getParameter("action").equals("u"))
-		{
-			
-		}
+		
+//		if(request.getParameter("action").equals("a"))
+//		{
+//			downSourceModel ds=new downSourceModel();
+//			ds.setIntroduce(request.getParameter("introduce"));
+//			ds.setTime(request.getParameter("time"));
+//			ds.setUrl(request.getParameter("url"));
+//			ds.setPictureUrl("01.jpg");
+//			
+//		}
+//		else if(request.getParameter("action").equals("d"))
+//		{
+//			
+//		}
+//		else if(request.getParameter("action").equals("s"))
+//		{
+//			dowmSourseImpl dsi=new dowmSourseImpl();
+//			List<downSourceModel> list=dsi.getAllDownSource();
+//			request.setAttribute("dowmSourse", list);
+//			request.getRequestDispatcher("/downSource.jsp").forward(request,response);
+//		}
+//		else if(request.getParameter("action").equals("u"))
+//		{
+//			
+//		}
 	}
 }

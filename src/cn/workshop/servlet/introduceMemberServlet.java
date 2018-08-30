@@ -45,7 +45,14 @@ public class introduceMemberServlet extends HttpServlet {
 		List<introduceMemberModel> list=null;
 		list=imi.getAllIntroduceMenber();
 		request.setAttribute("introduceMember", list);
-		request.getRequestDispatcher("/introduceMember.jsp").forward(request, response);
+		if(request.getSession().getAttribute("admin")!=null && request.getSession().getAttribute("admin")=="admin")
+		{
+			request.getRequestDispatcher("/introduceMemberAdmin.jsp").forward(request, response);
+		}
+		else
+		{
+			request.getRequestDispatcher("/introduceMember.jsp").forward(request, response);
+		}
 	}
 
 }

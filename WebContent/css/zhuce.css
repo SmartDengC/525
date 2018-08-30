@@ -1,0 +1,37 @@
+.back{
+    background: url('../img/l1.png') no-repeat;
+    background-size: cover;
+    width: 70%;
+    height: 600px;
+    position: relative;
+    margin:0 auto;
+    
+}
+.bback{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 600px;
+    line-height: 50px;
+    text-align: center;
+    background:rgba(244,245,249,0.7);
+}
+.zhuce {
+    text-align:left;border: 2px solid gray;border-radius: 6px;
+   
+    width:600px;
+    margin: 100px auto 0 auto;
+    position: relative;
+      
+}
+.formgroup2{position: absolute;right:20px;top:10px;}
+.zc{
+    background: rgb(98,99,147);
+width:200px;
+border-radius: 6px;
+color:white;
+position: absolute;bottom: 10px;right:120px;
+}

@@ -7,7 +7,7 @@ public class loginImpl implements loginControl {
 	@Override
 	public boolean logindeal(String name, String password) {
 		// TODO Auto-generated method stub
-		if(name.equals("admin") && password.equals("123456"))
+		if(name.equals("admin") && password.equals("admin"))
 		{
 			return true;
 		}

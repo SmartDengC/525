@@ -19,23 +19,49 @@ public class dowmSourseImpl implements downSourceControl {
 	@Override
 	public Boolean addDownSource(downSourceModel ds) {
 		// TODO Auto-generated method stub
-		return null;
+		downSourceDaoImpl dsl=new downSourceDaoImpl();
+		//数据验证
+		if(ds!=null && ds.getId()!=null)
+		{
+			if(dsl.addDownSource(ds))
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}	
+		}
+		else
+		{
+			return false;
+		}
+			
 	}
 
 	@Override
 	public Boolean modifyDownSource(downSourceModel ds) {
 		// TODO Auto-generated method stub
-		return null;
+		if(new downSourceDaoImpl().modifyDownSource(ds))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}		
 	}
 
 	@Override
 	public Boolean deleteDownSource(String id) {
 		// TODO Auto-generated method stub
-		return null;
+		if(new downSourceDaoImpl().deleteDownSource(id))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}	
 	}
-
-
-
-	
-
 }

@@ -15,15 +15,13 @@
         <div class="rowl">
         <h1>
             <img src="./img/01.jpg" alt="">
-            <span>智能信息系统工作室</span>
+            <span>智能信息系统工作室：后台系统</span>
         </h1>
        </div>
        <form class="search"  method="get" >
         <input class="sinput" type="text" name="s" /> 
         <input class="sbtn" type="submit" value=""/>       
-    </form>
-    <a class="dlq" href="login.jsp">登录</a>
-    
+    </form>    
 </div>
    
    

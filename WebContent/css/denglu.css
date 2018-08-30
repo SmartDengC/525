@@ -1,0 +1,31 @@
+
+.back{
+    background: url('../img/l1.png') no-repeat;
+    background-size: cover;
+    width: 70%;
+    height: 600px;
+    position: relative;
+    margin:0 auto;
+    
+}
+.bback{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 600px;
+    line-height: 50px;
+    text-align: center;
+    background:rgba(244,245,249,0.7);
+}
+.denglu{width: 540px;height: 280px;margin-left:420px;margin-top:120px;border: 2px solid gray;padding-top:40px;}
+.btns{background: rgb(98,99,147);
+    width:200px;
+    border-radius: 6px;
+    color:white;
+
+}
+.forz a{text-decoration: none;color: rgb(98,99,147)}
+.lu1{width:280px;height:320px;position: absolute;top:120px;left:120px;}

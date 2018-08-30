@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="官网">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/adinf.css">
+    <link rel="stylesheet" href="./css/xiugaitianjia.css">
+
     <title>工作室网站</title>
 </head>
 <body>
@@ -23,31 +24,23 @@
         <input class="sbtn" type="submit" value=""/>
         
     </form>   
-
 </div>
-
    
 
 </div>
-    <div class="inf">
-        <div class="list">
-                        <ul> <li class="oli"><a href="gonggong.html" target="_self">公共信息</a></li></ul>
-                        <ul> <li class="mli"><a href="ziyuan.html" target="_self">资源下载</a></li></ul>
 
-        </div>
-        <div class="new">
-            <div class="jiao"></div>
-            <div class="j1">
-                    <form > 
-                            <div>标题:<input type="text"/></div>
-                            <div>时间:<input type="text"/></div>
-                            <div>内容:<textarea rows="10" cols="60"></textarea></div>
-                            <div><button type="submit">提交</button></div>
-                     </form> 
-            </div>
-            
-       </div>
-      
-   </div> 
+    <div class="nav">
+
+
+    </div>
+  <div class="xiugaitianjia">
+        <form > 
+                <div>资源标题:<input type="text"></div>
+                <div>资源上传时间:<input type="text"></div>
+                <div>资源介绍:<textarea rows="10" cols="60"></textarea></div>
+                <div>资源地址:<input type="text"></div>
+                <div><button type="submit">提交</button></div>
+         </form> 
+  </div>       
 </body>
 </html>

@@ -16,15 +16,14 @@
         <div class="rowl">
         <h1>
             <img src="./img/01.jpg" alt="">
-            <span>智能信息系统工作室</span>
+            <span>智能信息系统工作室:后台系统</span>
         </h1>
        </div>
        <form class="search"  method="get" >
         <input class="sinput" type="text" name="s" /> 
         <input class="sbtn" type="submit" value=""/>
         
-    </form>
-    <a class="dlq" href="login.jsp">登录</a>
+    </form>    
 
 </div>
 
@@ -35,7 +34,7 @@
     <div class="nav">
         <div class="buttom">点击展开菜单</div>
        <ul id="nav">
-           <li><a href="index.html" target="_self">首页</a></li>
+           <li><a href="indexServlet" target="_self">首页</a></li>
            <li><a href="">新闻与媒体</a>
                 <ul>
                 <li><a href="noticeInfoServlet" target="_self" >公共信息</a></li>
@@ -49,7 +48,7 @@
             </li>
            <li><a href="">联系我们</a>
                 <ul>
-                <li><a  href="contact.jsp" target="_self">办事咨询</a></li>
+                <li><a  href=""contact.jsp"" target="_self">办事咨询</a></li>
                 </ul>
            </li>
            </ul>

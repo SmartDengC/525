@@ -1,13 +1,13 @@
 .inf{width :70%;
     margin: 0 auto;
-    height:950px;;
+    height:850px;;
     background: rgb(205,216,248);
     position: relative;
   }
   .inf .list{
       width:20%;
       background: rgb(205,206,211);
-      height:900px;
+      height:760px;
       margin-top:25px;
       margin-bottom: 25px;
       float: left;
@@ -20,7 +20,7 @@
   .inf .list ul a{text-decoration: none;color:black;}
   .inf .new{
       width:66%;
-      height:900px;
+      height:780px;
       margin-top:25px;
       margin-bottom: 25px;
       background: white;
@@ -35,7 +35,7 @@
   
   
   }
-  .inf .list ul .mli{
+  .inf .list ul .oli{
       margin-top: 40px;
       height: 50px;
       line-height: 50px;
@@ -45,9 +45,9 @@
       background-size:35px;  
       background-repeat: no-repeat;
       background-position: 0px 8px;
-      
+      font-size:14px;
   }
-  .inf .list ul .oli{
+  .inf .list ul .mli{
       margin-top: 40px;
       height: 50px;
       line-height: 50px;
@@ -57,7 +57,7 @@
       background-size:35px;  
       background-repeat: no-repeat;
       background-position: 0px 8px;
-      
+      font-size:14px;
   }
   
   
@@ -68,7 +68,7 @@
       border:25px solid white  ;
       border-top-color:white ;
       border-right-color:white;
-      top:122px;
+      top:32px;
       left:-22px;
       transform:rotate(45deg);
   
@@ -77,117 +77,28 @@
       content:'';
       position:absolute;
       border:25px solid rgb(196,200,216) ;
-      top:122px;
+      top:32px;
       left:-26px;
       transform:rotate(45deg);
   
   }
-  .j1,.j2{
+  .j1{
       width: 80%;
       margin:0 auto;
- 
-  }
-  .j3{     
-    width: 80%;
-    margin:0 auto;
-  }
-  .j1,.j2,.j3 p{
-      border-top:4px;
-      overflow: hidden;
-  }
+      border-bottom: double;
+      margin-top:20px;
   
-  .j1{height:220px;position: relative;
-      
+  }
+  .j1 p{
+      word-wrap:break-word ;
+      word-break: break-all;
+      overflow: hidden;
+      position: relative;
+  }
+  .j1 h4{display: inline;}
+  .j1 .time{right:90px;
+  position: absolute;
   }
 
-  .j2{height:290px;
-   }
-
-  .j3{height:250px;}
- .j1 h1{
-    border-bottom: solid 2px;
-    color: rgb(133,87,88);
-  }
-  .j2 h1{
-    border-bottom: solid 2px;
-    color: rgb(72,77,123);
-  }
-  .j3 h1{
-    border-bottom: solid 2px;
-    color: rgb(111,151,116);
-  }
-.nk{
-      font-size:15px;
-      border-bottom: dashed 2px rgb(205,206,211);
-      height:60px;
-}
-.nk img{width: 90px;height:40px;}
-.nk img,p{
-   float: left;
-}
-
-.nk a{margin-left:20px;}
-.tc a{margin-left:20px;}
-.tc{
-    font-size:15px;
-    border-bottom: dashed 2px rgb(205,206,211);
-    height:60px;
-    margin-top:10px;
-}
-.tc img{width: 180px;height:40px;}
-.tc img,p{
-    float: left;
-}
-
-.nk p{margin-left: 20px;}
-.tc p{margin-left: 20px;}
-
-
-.ogi{
-    padding-left:0px;
-    list-style:none;
-    margin:0px 10px 10px 0;
-              
- 
-   
-}
-.gi{float: left;}
-.ogi .time{margin-left: 140px;}
-.ogi .dizhi{margin-left: 2px;}
-.biaoti{font-size: 12px;}
-.j2 li{font-weight: bold;}
- .jieshao{color:rgb(215, 215, 215);font-size:12px;border-bottom: 2px black solid;}
- a{text-decoration: none;font-size:14px;}
-
-    
-
-.j3 ul li{
-    list-style:none;
-    border-bottom: dashed 2px rgb(111,151,116);
-    height:40px;
-    font-size: 30px;
-}
-.j3 ul,li{padding: 0px;margin: 0px;}
-.j3 ul li a{color: black;}
-.j3 ul li a{text-decoration:none;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 

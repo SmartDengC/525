@@ -1,6 +1,6 @@
 .inf{width :70%;
   margin: 0 auto;
-  height:850px;
+  height:850px;;
   background: rgb(205,216,248);
   position: relative;
 }
@@ -45,8 +45,9 @@
     background-size:35px;  
     background-repeat: no-repeat;
     background-position: 0px 8px;
+    font-size:14px;
 }
-.inf .list ul .mli,.fli{
+.inf .list ul .mli{
     margin-top: 40px;
     height: 50px;
     line-height: 50px;
@@ -56,6 +57,7 @@
     background-size:35px;  
     background-repeat: no-repeat;
     background-position: 0px 8px;
+    font-size:14px;
 }
 
 
@@ -80,64 +82,24 @@
     transform:rotate(45deg);
 
 }
-.j1,.j2,.j3{
+.j1{
     width: 80%;
     margin:0 auto;
     border-bottom: double;
     margin-top:20px;
 
-
 }
-.j3{padding-top:3px;}
-
-.j1,.j2,.j3 p{
+.j1 p{
     word-wrap:break-word ;
     word-break: break-all;
     overflow: hidden;
+    position: relative;
+}
+.j1 h4{display: inline;}
+.j1 .time{right:90px;
+position: absolute;
 }
 
 
 
-.j2 img{margin-right:30px;
-}
 
-.fenye{
-    position: absolute;
-    bottom: -8px;
-    right:150px;
-
-}
-.fenye ul{
-    height:100%;
-    list-style-type:none;
-}
-
-.fenye ul li{
-    line-height:40px;
-    float:left;
-}
-.page_btn{
-    border-radius:4px;
-    border:1px solid #e5e9ef;
-    background:#fff;
-    margin-right:10px;
-    text-align:center;
-    width:28px;
-    height:28px;
-    line-height: 28px;
-    margin-top:6px;
-    outline:0;
-}
-
-.page_btn:hover{
-    background: rgb(98,99,147);
-    color:#4f90fb;
-}
-
-.fenye span.pages_span{
-    margin-right:10px;
-    width:38px;
-    height:38px;
-    position:relative;
-    top:10px;
-}
