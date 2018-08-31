@@ -3,6 +3,7 @@ package cn.workshop.dao;
 import java.util.List;
 
 import cn.workshop.model.downSourceModel;
+import cn.workshop.model.noticeInfoModel;
 
 public interface downSource {
 	/**
@@ -28,6 +29,12 @@ public interface downSource {
 	public Boolean modifyDownSource(downSourceModel ds);
 	
 	
+	/**
+	  * 查询一条信息
+	  * @param id 信息的ID
+	  * @return 返回封装好的信息
+	  */
+	public downSourceModel queryOneNoticeInfo(String id);
 
 	
 }

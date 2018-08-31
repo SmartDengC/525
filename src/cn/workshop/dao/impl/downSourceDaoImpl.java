@@ -123,6 +123,42 @@ public class downSourceDaoImpl implements downSource {
 		return false;
 	}
 
+
+	@Override
+	public downSourceModel queryOneNoticeInfo(String id) {
+		Connection connection=null;
+		Statement statement=null;
+		ResultSet resultset =null;
+		DButils conn=new DButils();
+		connection = conn.DBcon();
+		statement =conn.DBstatement(connection);
+		String sql ="SELECT *FROM DOWNSOURCE where id="+id+";";
+		
+		try {
+			resultset=statement.executeQuery(sql);
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}				
+		downSourceModel down =new downSourceModel();
+		try {
+			
+			while(resultset.next()){				
+				down.setId(resultset.getString("id"));
+				down.setName(resultset.getString("name"));
+				down.setIntroduce(resultset.getString("introduce"));
+				down.setTime(resultset.getString("time"));
+				down.setUrl(resultset.getString("url"));
+				down.setPictureUrl(resultset.getString("pictureUrl"));				
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
+		return down;
+	}
+
 	
 	
 }

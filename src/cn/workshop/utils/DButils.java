@@ -66,19 +66,6 @@ public  class DButils  {
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	public void closeDBCon(Connection connection, Statement statement,ResultSet resultSet){
 		if (resultSet != null) {
 			try {

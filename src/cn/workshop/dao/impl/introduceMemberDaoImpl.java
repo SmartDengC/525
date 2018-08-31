@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import cn.workshop.dao.introduceMember;
 import cn.workshop.utils.DButils;
+import cn.workshop.model.downSourceModel;
 import cn.workshop.model.introduceMemberModel;
 
 public class introduceMemberDaoImpl implements introduceMember {
@@ -126,6 +127,44 @@ public class introduceMemberDaoImpl implements introduceMember {
 			e.printStackTrace();
 		}
 		return false;
+	}
+
+
+
+	@Override
+	public introduceMemberModel queryOneNoticeInfo(String id) {
+		Connection connection=null;
+		Statement statement=null;
+		ResultSet resultset =null;
+		DButils conn=new DButils();
+		connection = conn.DBcon();
+		statement =conn.DBstatement(connection);
+		String sql ="SELECT *FROM INTRODUCEMEMBER where id="+id+";";
+		
+		try {
+			resultset=statement.executeQuery(sql);
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}				
+		introduceMemberModel intro =new introduceMemberModel();
+		try {
+			
+			while(resultset.next()){				
+				intro.setId(resultset.getString("id"));
+				intro.setName(resultset.getString("name"));
+				intro.setDuty(resultset.getString("duty"));
+				intro.setIntroduce(resultset.getString("introduce"));
+				intro.setPictureUrl(resultset.getString("pictureUrl"));
+				intro.setContactInformation(resultset.getString("contactInformation"));
+				intro.setKey(resultset.getString("key"));				
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
+		return intro;
 	}
 
 

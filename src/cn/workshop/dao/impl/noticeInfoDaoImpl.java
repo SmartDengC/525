@@ -110,7 +110,7 @@ public class noticeInfoDaoImpl implements noticeInfo {
 
 	@Override
 	public noticeInfoModel queryOneNoticeInfo(String id) {
-		// TODO Auto-generated method stub
+		
 		Connection connection=null;
 		Statement statement=null;
 		ResultSet resultset =null;
@@ -118,9 +118,6 @@ public class noticeInfoDaoImpl implements noticeInfo {
 		connection = conn.DBcon();
 		statement =conn.DBstatement(connection);
 		String sql ="SELECT *FROM NOTICEINFO where id="+id+";";
-		
-		
-		
 		
 		try {
 			resultset=statement.executeQuery(sql);

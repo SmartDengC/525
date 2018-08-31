@@ -5,6 +5,7 @@ import java.util.List;
 
 import cn.workshop.model.downSourceModel;
 import cn.workshop.model.introduceMemberModel;
+import cn.workshop.model.noticeInfoModel;
 
 public interface introduceMember {
 	/**
@@ -30,7 +31,12 @@ public interface introduceMember {
 	 */
 	public Boolean modifyDownSource(introduceMemberModel im);
 	
-	
+	/**
+	  * 查询一条信息
+	  * @param id 信息的ID
+	  * @return 返回封装好的信息
+	  */
+	public introduceMemberModel queryOneNoticeInfo(String id);
 	
 	
 }
