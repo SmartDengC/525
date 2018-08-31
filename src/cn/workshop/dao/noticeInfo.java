@@ -30,6 +30,10 @@ public interface noticeInfo {
 		 */
 	public Boolean modifyNoticeinfo(noticeInfoModel ni);
 	 
-	 
-	
+	 /**
+	  * 查询一条信息
+	  * @param id 信息的ID
+	  * @return 返回封装好的信息
+	  */
+	public noticeInfoModel queryOneNoticeInfo(String id);
 }

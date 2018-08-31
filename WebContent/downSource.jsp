@@ -57,8 +57,8 @@
     </div>
     <div class="inf">
             <div class="list">
-                    <ul> <li class="oli"><a href="gonggong.html" target="_self">公共信息</a></li></ul>
-                    <ul> <li class="mli"><a href="ziyuan.html" target="_self">资源下载</a></li></ul>
+                    <ul> <li class="oli"><a href="noticeInfoServlet" target="_self">公共信息</a></li></ul>
+                    <ul> <li class="mli"><a href="downSourseServlet" target="_self">资源下载</a></li></ul>
              </div>
     <div class="new">
         <div class="jiao"></div>

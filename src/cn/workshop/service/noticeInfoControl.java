@@ -34,4 +34,11 @@ public interface noticeInfoControl {
 	 * @return 执行情况
 	 */
 	public Boolean modifyNoticeinfo(noticeInfoModel ni);
+	
+	/**
+	 * 查询一条信息
+	 * @param id 要查询的信息id	
+	 * @return 信息对象
+	 */
+	public noticeInfoModel getOneNoticeInfo(String id);
 }

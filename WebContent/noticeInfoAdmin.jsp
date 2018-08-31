@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+    <%@ page import="cn.workshop.service.impl.noticeInfoImpl,java.util.List,cn.workshop.model.noticeInfoModel
+,java.util.Iterator" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
@@ -56,36 +58,42 @@
     </div>
     <div class="inf">
         <div class="list">
-                        <ul> <li class="oli"><a href="gonggong.html" target="_self">公共信息</a></li></ul>
-                        <ul> <li class="mli"><a href="ziyuan.html" target="_self">资源下载</a></li></ul>
+                        <ul> <li class="oli"><a href="noticeInfoServlet" target="_self">公共信息</a></li></ul>
+                        <ul> <li class="mli"><a href="downSourseServlet" target="_self">资源下载</a></li></ul>
 
         </div>
-        <div class="new">
+        <div class="new">       
             <div class="jiao"></div>
             <div class="j1">
-                <h4 >[重要事的标题]</h4><h4 class="time">时间</h4>
-                <p>&nbsp;&nbsp;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-            </div>
+            <form action="noticeInfoServlet?action=insert" method="post"> 
+                            <div>标题:<input name="title" type="text"/></div>
+                            <div>时间:<input name="time" type="text"/></div>
+                            <div>内容:<textarea name="text" rows="10" cols="40"></textarea></div>
+                            <div><button type="submit">添加信息</button></div>
+                     </form> 
+            
+          <%
+            List<noticeInfoModel>list=null;
+            noticeInfoModel ni=null;
+            noticeInfoImpl nii=new noticeInfoImpl();
+            list=(List<noticeInfoModel>)request.getAttribute("noticeInfo");
+            Iterator it = list.iterator();
+            while(it.hasNext())
+            {           	
+            	ni=(noticeInfoModel)it.next();     
+            	System.out.println(ni.getId());
+           
+            %>
             <div class="j1">
-                    <h4>[新闻之类的标题]</h4><h4 class="time">时间</h4>
-                <p>&nbsp;&nbsp;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-              
+                <h4 ><%=ni.getTitle() %></h4><h4 class="time"><%=ni.getTime() %></h4>
+                <p>&nbsp;&nbsp;<%=ni.getText() %></p>
+                <a href="noticeInfoServlet?action=delect&id=<%=ni.getId()%> " >删除</a>  &nbsp;&nbsp;<a href="noticeInfoServlet?action=updata&id=<%=ni.getId()%>&key=1" >修改</a>
             </div>
-            <div class="j1">
-                    <h4>[这个就是可看可不看不重要的]</h4><h4 class="time">时间</h4>
-                    <p>&nbsp;&nbsp;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-
-            </div>
-            <div class="j1">
-                <h4>[这个就是可看可不看不重要的]</h4><h4 class="time">时间</h4>
-                <p>&nbsp;&nbsp;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-
-           </div>
-           <div class="j1">
-            <h4>[这个就是可看可不看不重要的]</h4><h4 class="time">时间</h4>
-            <p>&nbsp;&nbsp;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-
-          </div>
+            
+			<%
+            }
+			%>
+			
        </div>
       
    </div>

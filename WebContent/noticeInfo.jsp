@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ page import="cn.workshop.service.impl.noticeInfoImpl,java.util.List,cn.workshop.model.noticeInfoModel
+,java.util.Iterator" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
@@ -56,38 +57,33 @@
     </div>
     <div class="inf">
         <div class="list">
-                        <ul> <li class="oli"><a href="gonggong.html" target="_self">公共信息</a></li></ul>
-                        <ul> <li class="mli"><a href="ziyuan.html" target="_self">资源下载</a></li></ul>
+                        <ul> <li class="oli"><a href="noticeInfoServlet" target="_self">公共信息</a></li></ul>
+                        <ul> <li class="mli"><a href="downSourseServlet" target="_self">资源下载</a></li></ul>
 
         </div>
         <div class="new">
             <div class="jiao"></div>
+            <%
+            List<noticeInfoModel>list=null;
+            noticeInfoModel ni=null;
+            noticeInfoImpl nii=new noticeInfoImpl();
+            list=(List<noticeInfoModel>)request.getAttribute("noticeInfo");
+            Iterator it = list.iterator();
+            while(it.hasNext())
+            {           	
+            	ni=(noticeInfoModel)it.next();     
+            	System.out.println(ni.getId());
+           
+            %>
             <div class="j1">
-                <h4 >[重要事的标题]</h4><h4 class="time">时间</h4>
-                <p>&nbsp;&nbsp;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                <h4 ><%=ni.getTitle() %></h4><h4 class="time"><%=ni.getTime() %></h4>
+                <p>&nbsp;&nbsp;<%=ni.getText() %></p>
             </div>
-            <div class="j1">
-                    <h4>[新闻之类的标题]</h4><h4 class="time">时间</h4>
-                <p>&nbsp;&nbsp;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-              
-            </div>
-            <div class="j1">
-                    <h4>[这个就是可看可不看不重要的]</h4><h4 class="time">时间</h4>
-                    <p>&nbsp;&nbsp;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+			<%
+            }
+			%>
 
-            </div>
-            <div class="j1">
-                <h4>[这个就是可看可不看不重要的]</h4><h4 class="time">时间</h4>
-                <p>&nbsp;&nbsp;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-
-           </div>
-           <div class="j1">
-            <h4>[这个就是可看可不看不重要的]</h4><h4 class="time">时间</h4>
-            <p>&nbsp;&nbsp;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-
-          </div>
-       </div>
-      
+       </div>    
    </div>
 
    <div class="onfooter">

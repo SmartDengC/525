@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+    <%@ page import="cn.workshop.model.noticeInfoModel" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <head>
     <meta charset="UTF-8">
@@ -8,6 +9,14 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/adinf.css">
     <title>工作室网站</title>
+    <style type="text/css">
+    .div{
+    display:none;
+    }
+    
+    
+    
+    </style>
 </head>
 <body>
 
@@ -31,17 +40,23 @@
 </div>
     <div class="inf">
         <div class="list">
-                        <ul> <li class="oli"><a href="gonggong.html" target="_self">公共信息</a></li></ul>
-                        <ul> <li class="mli"><a href="ziyuan.html" target="_self">资源下载</a></li></ul>
+                        <ul> <li class="oli"><a  target="_self">公共信息</a></li></ul>
+                        <ul> <li class="mli"><a  target="_self">资源下载</a></li></ul>
 
         </div>
         <div class="new">
             <div class="jiao"></div>
             <div class="j1">
-                    <form > 
-                            <div>标题:<input type="text"/></div>
-                            <div>时间:<input type="text"/></div>
-                            <div>内容:<textarea rows="10" cols="60"></textarea></div>
+            <%
+            noticeInfoModel nim=null;
+            nim=(noticeInfoModel)request.getAttribute("noticeInfo");
+            
+            %>
+                    <form action="noticeInfoServlet?action=updata&key=2" method="post" > 
+                    		<div class="div">id:<input  readonly="readonly" name="id" value="<%=nim.getId() %>" type="text"/></div>
+                            <div>标题:<input name="title" value="<%=nim.getTitle() %>" type="text"/></div>
+                            <div>时间:<input name="time" value="<%=nim.getTime() %>" type="text"/></div>
+                            <div>内容:<textarea name="text"  rows="10" cols="40"><%=nim.getText() %></textarea></div>
                             <div><button type="submit">提交</button></div>
                      </form> 
             </div>

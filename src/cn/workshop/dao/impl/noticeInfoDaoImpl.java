@@ -22,7 +22,7 @@ public class noticeInfoDaoImpl implements noticeInfo {
 		DButils conn=new DButils();
 		connection = conn.DBcon();
 		statement =conn.DBstatement(connection);
-		String sql =" SELECT *FROM NOTICEINFO;;";
+		String sql =" SELECT *FROM NOTICEINFO order by id DESC;";
 		try {
 			resultset=statement.executeQuery(sql);
 		} catch (SQLException e1) {
@@ -106,6 +106,44 @@ public class noticeInfoDaoImpl implements noticeInfo {
 		}
 		
 		return false;
+	}
+
+	@Override
+	public noticeInfoModel queryOneNoticeInfo(String id) {
+		// TODO Auto-generated method stub
+		Connection connection=null;
+		Statement statement=null;
+		ResultSet resultset =null;
+		DButils conn=new DButils();
+		connection = conn.DBcon();
+		statement =conn.DBstatement(connection);
+		String sql ="SELECT *FROM NOTICEINFO where id="+id+";";
+		
+		
+		
+		
+		try {
+			resultset=statement.executeQuery(sql);
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}				
+		noticeInfoModel info =new noticeInfoModel();
+		try {
+			
+			while(resultset.next()){				
+				info.setId(resultset.getString("id"));
+				info.setTitle(resultset.getString("title"));
+				info.setTime(resultset.getString("time"));
+				info.setText(resultset.getString("text"));
+				info.setPictureUrl(resultset.getString("pictureUrl"));				
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
+		return info;
 	}
 
 
