@@ -42,6 +42,12 @@ public class introduceMemberImpl implements introduceMemberControl {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public introduceMemberModel getOneIntroduceMenber() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 
 	

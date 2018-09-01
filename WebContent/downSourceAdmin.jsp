@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+<%@ page import="java.util.List,cn.workshop.model.downSourceModel,java.util.Iterator" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
@@ -70,86 +72,45 @@
                 <img src="./img/logo10.png" ><p >天池<a href="https://tianchi.aliyun.com/" target="_blank" class="tc1" >https://tianchi.aliyun.com/</a></p>
             </div>
         </div>
-            <div class="j2">
+            <div >
              
                 <h1>优质网站</h1>
-
-                <div class="gi"> 
-                                    <ul class="ogi">
-                                            <li  class="biaoti">github<span class="time">2018.5.25</span></li>
-                                            <li class="jieshao">(程序员的托儿所)<a href="https://github.com/" target="_blank" class="dizhi">https://github.com/</a></li>                 
-                                   </ul>                                 
-
-                </div>
-                <div class="gi"> 
-                        <ul class="ogi">
-                                <li  class="biaoti">爱软客<span class="time">2018.5.25</span></li>
-                                <li class="jieshao">(万能软件下载)<a href="http://www.bokeboke.net/" target="_blank" class="dizhi">http://www.bokeboke.net/</a></li>                 
-                       </ul>                                 
-
-    </div>
-    <div class="gi"> 
-            <ul class="ogi">
-                    <li  class="biaoti">CSDN<span class="time">2018.5.25</span></li>
-                    <li class="jieshao">(博客社区)<a href="https://www.csdn.net/" target="_blank" class="dizhi">https://www.csdn.net/</a></li>                 
-           </ul>                                 
-
-</div>
-<div class="gi"> 
-        <ul class="ogi">
-                <li  class="biaoti">imooc<span class="time">2018.5.25</span></li>
-                <li class="jieshao">(IT自学网站)<a href="https://www.imooc.com/" target="_blank" class="dizhi">https://www.imooc.com/</a></li>                 
-       </ul>                                 
-
-</div>
-<div class="gi"> 
-        <ul class="ogi">
-                <li  class="biaoti">github<span class="time">2018.5.25</span></li>
-                <li class="jieshao">(程序员的托儿所)<a href="https://github.com/" target="_blank" class="dizhi">https://github.com/</a></li>                 
-       </ul>                                 
-
-</div>
-<div class="gi"> 
-        <ul class="ogi">
-                <li  class="biaoti">github<span class="time">2018.5.25</span></li>
-                <li class="jieshao">(程序员的托儿所)<a href="https://github.com/" target="_blank" class="dizhi">https://github.com/</a></li>                 
-       </ul>                                 
-
-</div>
-<div class="gi"> 
-        <ul class="ogi">
-                <li  class="biaoti">github<span class="time">2018.5.25</span></li>
-                <li class="jieshao">(程序员的托儿所)<a href="https://github.com/" target="_blank" class="dizhi">https://github.com/</a></li>                 
-       </ul>                                 
-
-</div>
-<div class="gi"> 
-        <ul class="ogi">
-                <li  class="biaoti">github<span class="time">2018.5.25</span></li>
-                <li class="jieshao">(程序员的托儿所)<a href="https://github.com/" target="_blank" class="dizhi">https://github.com/</a></li>                 
-       </ul>                                 
-
-</div>
-
-
+                <form action="downSourseServlet?action=insert" method="post"> 
+                <div>资源标题:<input type="text" name="name"></div>
+                <div>资源上传时间:<input type="text" name="time"></div>
+                <div>资源介绍:<textarea rows="10" cols="60" name="introduce"></textarea></div>
+                <div>资源地址:<input type="text" name="url"></div>
+                <div><button type="submit">提交</button></div>
+         		</form>
+				<%               
+                List<downSourceModel> list=(List<downSourceModel>)request.getAttribute("dowmSourse");
+                downSourceModel dsm=null;
+                Iterator it = list.iterator();
+                String temp=null;
+                while(it.hasNext())
+                {
+                	dsm=(downSourceModel)it.next();
+                	//temp=dsm.getIntroduce().substring(0, 8);
                 
-                   
+                
+                %>
+                <div class="gi"> 
+                     <ul class="ogi">
+                        <li  class="biaoti"><%=dsm.getName() %><span class="time"><%=dsm.getTime() %></span></li>
+                        <li class="jieshao"><%=dsm.getIntroduce() %><a href="<%=dsm.getUrl() %>" target="_blank" class="dizhi"><%=dsm.getUrl() %></a></li>                 
+                    	<li class="biaoti">&nbsp;&nbsp;<a href="downSourseServlet?action=delect&id=<%=dsm.getId()%>">删除</a>&nbsp;&nbsp;<a href="downSourseServlet?action=updata&id=<%=dsm.getId()%>&key=1">修改</a></li>
+                    </ul>                                 
+                </div>
+                <%
+                }
+				%>
+                
 
-            </div>         
 
-          
-             <div class="j3">
-                    <h1>经典文章</h1>
-                    <ul>
-                            <li><a href="">如何使用github?</a></li>
-                            <li><a href="">前后端必备的linux基础?</a></li>
-                            <li><a href="">java9种排序详解和实例汇总</a></li>
-                            <li><a href="">鼠标共享效率工具——Synergy</a></li>
-                            <li><a href="">XXXXXXXXXXXXXXXXXXXXXXXXXX</a></li>
-                            <li><a href="">XXXXXXXXXXXXXXXXXXXXXXXXXXX</a></li>
 
-                    </ul>
-            </div> 
+				
+                
+        </div>         
         </div>
  </div>
 

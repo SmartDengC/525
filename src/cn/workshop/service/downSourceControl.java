@@ -15,7 +15,12 @@ public interface downSourceControl {
 	 */
 	public List<downSourceModel> getAllDownSource();
 	
-	
+	/**
+	 * 获取一个资源
+	 * @param id 资源id
+	 * @return 一个资源对象
+	 */
+	public downSourceModel getOneDownSource(String id);
 	/**
 	 *添加一个资源 
 	 * @param ds 要添加的资源对象

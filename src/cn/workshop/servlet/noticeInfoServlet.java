@@ -98,9 +98,7 @@ public class noticeInfoServlet extends HttpServlet {
 		else
 		{
 			request.getRequestDispatcher("/noticeInfo.jsp").forward(request, response);
-		}
-		
-				
+		}						
 	}
 
 }

@@ -71,8 +71,7 @@
             Iterator it = list.iterator();
             while(it.hasNext())
             {           	
-            	ni=(noticeInfoModel)it.next();     
-            	System.out.println(ni.getId());
+            	ni=(noticeInfoModel)it.next();                 	
            
             %>
             <div class="j1">

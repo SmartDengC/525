@@ -15,13 +15,14 @@ public class dowmSourseImpl implements downSourceControl {
 		list=dsl.queryDownSource();
 		return list;
 	}
-
+	
+	
 	@Override
 	public Boolean addDownSource(downSourceModel ds) {
 		// TODO Auto-generated method stub
 		downSourceDaoImpl dsl=new downSourceDaoImpl();
 		//数据验证
-		if(ds!=null && ds.getId()!=null)
+		if(ds!=null)
 		{
 			if(dsl.addDownSource(ds))
 			{
@@ -63,5 +64,16 @@ public class dowmSourseImpl implements downSourceControl {
 		{
 			return false;
 		}	
+	}
+
+
+	@Override
+	public downSourceModel getOneDownSource(String id) {
+		// TODO Auto-generated method stub
+		downSourceDaoImpl dsdi=new downSourceDaoImpl();
+		downSourceModel dsm=null;
+		dsm=dsdi.queryOneNoticeInfo(id);
+		return dsm;
+		
 	}
 }

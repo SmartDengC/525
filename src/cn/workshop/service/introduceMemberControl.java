@@ -16,6 +16,8 @@ public interface introduceMemberControl {
 	 */
 	public List<introduceMemberModel> getAllIntroduceMenber();
 	
+	
+	public introduceMemberModel getOneIntroduceMenber();
 	/**
 	 * 添加一个成员
 	 * @param im 成员对象
