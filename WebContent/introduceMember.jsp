@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+    <%@ page import="cn.workshop.model.introduceMemberModel,java.util.List,java.util.Iterator" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
@@ -61,135 +62,77 @@
                     
              </div>
     <div class="new">
+    <%
+    introduceMemberModel imm=null;
+    List<introduceMemberModel> list=(List<introduceMemberModel>)request.getAttribute("introduceMember");
+    Iterator it=null;
+    %>
         <div class="jiao"></div>
         <div class="j1">
             <h3>指导老师</h3>
-            <img src="./img/zp.jpg" class="zhaopian">
+            <img src="./img/01.jpg" class="zhaopian">
                 <div class="shenfen">
                 <div>姓名</div>
                 <div>职位</div>
                 <div>联系电话</div>
-                <p class="jieshao">&nbsp;&nbsp;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+                <p class="jieshao">&nbsp;&nbsp;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
             </div>  
         </div>
-            <div class="j2">
-             
+        <%
+        it=list.iterator();
+        while(it.hasNext())
+        {
+        	imm=(introduceMemberModel)it.next();
+        	if(imm.getKey().equals("1"))
+        	{
+        		
+        	           
+        %>
+            <div class="j2">             
                 <h3>负责人</h3>
-                <img src="./img/zp.jpg" class="zhaopian">
+                <img src="./img/<%=imm.getPictureUrl() %>" class="zhaopian">
                 <div class="shenfen">
-                <div>姓名</div>
-                <div>职位</div>
-                <div>联系电话</div>
-                <p class="jieshao">&nbsp;&nbsp;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+                <div>姓名:<%=imm.getName() %></div>
+                <div>职位:<%=imm.getDuty() %></div>
+                <div>联系电话<%=imm.getContactInformation()%></div>
+                <p class="jieshao">&nbsp;&nbsp;<%=imm.getIntroduce()%></p>
             </div>
-         </div>         
-
-          
-             <div class="j3">
-                    <h3>负责人</h3>
-                    <img src="./img/zp.jpg" class="zhaopian">
-                <div class="shenfen">
-                <div>姓名</div>
-                <div>职位</div>
-                <div>联系电话</div>
-                <p class="jieshao">&nbsp;&nbsp;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
-            </div>     
-        </div> 
-        <div class="j4">
-            <h3>负责人</h3>
-            <img src="./img/zp.jpg" class="zhaopian">
-            <div class="shenfen">
-            <div>姓名</div>
-            <div>职位</div>
-            <div>联系电话</div>
-            <p class="jieshao">&nbsp;&nbsp;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
-        </div> 
-    </div> 
-    <div class="j4">
-        <h3>负责人</h3>
-        <img src="./img/zp.jpg" class="zhaopian">
-        <div class="shenfen">
-        <div>姓名</div>
-        <div>职位</div>
-        <div>联系电话</div>
-        <p class="jieshao">&nbsp;&nbsp;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
-    </div> 
-</div> 
+         </div>    
+              
+            <%
+        	}
+        }    
             
+            %>                             
         <div class="j5">
             <h3>成员</h3>
             <div class="rollBox">
                 <div class="LeftBotton" onmousedown="ISL_GoUp()" onmouseup="ISL_StopUp()" onmouseout="ISL_StopUp()"></div>
                 <div class="Cont" id="ISL_Cont">
                  <div class="ScrCont">
-                  <div id="List1">
-           
+                  <div id="List1">           
                    <!-- 图片列表 begin -->
+                   <%
+                   it=list.iterator();
+                   while(it.hasNext())
+                   {
+                	   imm=(introduceMemberModel)it.next();
+                	   if(!imm.getKey().equals("1"))
+                   		{
+                   %>
                     <div class="pic">
-                        <img src="./img/zp.jpg"  />
+                        <img src="./img/<%=imm.getPictureUrl() %>"  />
                      <div>
-                      <span>姓名</span>
-                       <span>负责板块</span>
-                       <span>简单介绍</span>
+                      <span><%=imm.getName() %></span>
+                       <span><%=imm.getDuty() %></span>
+                       <span><%=imm.getIntroduce() %></span>
                      </div>
                     </div>       
-           
-              <div class="pic">
-                <img src="./img/zp.jpg"  />
-                    <div>
-                      <span>姓名</span>
-                       <span>负责板块</span>
-                       <span>简单介绍</span>
-                     </div>
-                    </div>
-                    <div class="pic">
-                        <img src="./img/zp.jpg"  />
-                       <div>
-                      <span>姓名</span>
-                       <span>负责板块</span>
-                       <span>简单介绍</span>
-                     </div>
-                    </div>
-                    <div class="pic">
-                        <img src="./img/zp.jpg"  />
-                     <div>
-                      <span>姓名</span>
-                       <span>负责板块</span>
-                       <span>简单介绍</span>
-                     </div>
-                    </div>
-                    <div class="pic">
-                        <img src="./img/zp.jpg"  />
-                     <div>
-                      <span>姓名</span>
-                       <span>负责板块</span>
-                       <span>简单介绍</span>
-                     </div>
-                    </div>
-              <div class="pic">
-                <img src="./img/zp.jpg"  />
-                     <div>
-                      <span>姓名</span>
-                       <span>负责板块</span>
-                       <span>简单介绍</span>
-                     </div>
-                    </div> 
-                    <div class="pic">
-                        <img src="./img/zp.jpg"  />
-                     <div>
-                      <span>姓名</span>
-                       <span>负责板块</span>
-                       <span>简单介绍</span>
-                     </div>
-                    </div> 
-                    <div class="pic">
-                     <img src="./img/zp.jpg"  />
-                     <div>
-                      <span>姓名</span>
-                       <span>负责板块</span>
-                       <span>简单介绍</span>
-                     </div>
-                    </div>      
+		           <%
+                   		}
+                   }
+		           %>
+              	
                    <!-- 图片列表 end -->
            
                   </div>

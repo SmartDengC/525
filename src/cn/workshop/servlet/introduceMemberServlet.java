@@ -48,10 +48,10 @@ public class introduceMemberServlet extends HttpServlet {
 		{
 			
 			
-			if((request.getParameter("id")))
-			{
+			//if((request.getParameter("id")))
+			//{
 				System.out.println("删除信息失败！");
-			}			
+			//}			
 		}
 		else if(request.getParameter("action")!=null && request.getParameter("action").equals("updata"))//修改
 		{
@@ -59,14 +59,14 @@ public class introduceMemberServlet extends HttpServlet {
 			{
 				//这里要把这个id的noticeInfo数据查询出来，发送到那个model页面
 				
-				request.setAttribute("noticeInfo", nim);
+				//request.setAttribute("noticeInfo", nim);
 				request.getRequestDispatcher("/noticeInfomodel.jsp?action=updata").forward(request, response);
 				return ;
 			}
 			else if(request.getParameter("id")!=null && request.getParameter("key").equals("2"))//这是noticeInfomodel发过来的页面
 			{
 				
-				if(!)
+				//if(!)
 					System.out.println("添加失败");
 			}
 			
@@ -81,10 +81,12 @@ public class introduceMemberServlet extends HttpServlet {
 		request.setAttribute("introduceMember", list);
 		if(request.getSession().getAttribute("admin")!=null && request.getSession().getAttribute("admin")=="admin")
 		{
-			request.getRequestDispatcher("/introduceMemberAdmin.jsp").forward(request, response);
+			///introduceMemberAdmin.jsp
+			request.getRequestDispatcher("/introduceMember.jsp").forward(request, response);
 		}
 		else
 		{
+
 			request.getRequestDispatcher("/introduceMember.jsp").forward(request, response);
 		}
 	}

@@ -16,8 +16,12 @@ public interface introduceMemberControl {
 	 */
 	public List<introduceMemberModel> getAllIntroduceMenber();
 	
-	
-	public introduceMemberModel getOneIntroduceMenber();
+	/**
+	 * 查询一个人员
+	 * @param id 人员id
+	 * @return 一个人员对象
+	 */
+	public introduceMemberModel getOneIntroduceMenber(String id);
 	/**
 	 * 添加一个成员
 	 * @param im 成员对象

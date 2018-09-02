@@ -21,9 +21,13 @@ public class introduceMemberImpl implements introduceMemberControl {
 	@Override
 	public Boolean addIntroduceMember(introduceMemberModel im) {
 		// TODO Auto-generated method stub
-		if(new introduceMemberDaoImpl().addIntroduceMember(im))
+		if(im!=null)			
 		{
-			return true;
+			introduceMemberDaoImpl imdi=new introduceMemberDaoImpl();
+			if(imdi.addIntroduceMember(im))
+				return true;
+			else
+				return false;
 		}
 		else
 		{
@@ -34,20 +38,54 @@ public class introduceMemberImpl implements introduceMemberControl {
 	@Override
 	public Boolean deleteIntroduceMember(String id) {
 		// TODO Auto-generated method stub
-		return null;
+		if(id!=null)
+		{
+			introduceMemberDaoImpl imdi=new introduceMemberDaoImpl();
+			if(imdi.deleteIntroduceMember(id))
+				return true;
+			else
+				return false;
+		}
+		else
+		{
+			return false;
+		}
+
 	}
 
 	@Override
 	public Boolean modifyIntroduceMember(introduceMemberModel im) {
 		// TODO Auto-generated method stub
-		return null;
+		if(im!=null)
+		{
+			introduceMemberDaoImpl imdi=new introduceMemberDaoImpl();
+			if(imdi.modifyDownSource(im))
+				return true;
+			else
+				return false;
+		}
+		else
+		{
+			return false;
+		}
 	}
 
 	@Override
-	public introduceMemberModel getOneIntroduceMenber() {
-		// TODO Auto-generated method stub
-		return null;
+	public introduceMemberModel getOneIntroduceMenber(String id) {
+		// TODO Auto-generated method stub		
+		if(id!=null)
+		{
+			introduceMemberDaoImpl imdi=new introduceMemberDaoImpl();
+			return imdi.queryOneNoticeInfo(id);
+			
+		}
+		else
+		{
+			return null;
+		}
 	}
+
+
 	
 
 	
