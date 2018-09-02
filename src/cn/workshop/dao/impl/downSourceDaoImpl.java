@@ -22,17 +22,12 @@ public class downSourceDaoImpl implements downSource {
 			DButils conn=new DButils();
 			connection = conn.DBcon();
 			statement =conn.DBstatement(connection);
-			String sql =" SELECT *FROM DOWNSOURCE;;";
-			try {
-				resultset=statement.executeQuery(sql);
-			} catch (SQLException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-			
+			String sql =" SELECT *FROM downsource;;";
 			List<downSourceModel> list =new ArrayList<downSourceModel>();
 			
+			
 			try {
+				resultset=statement.executeQuery(sql);
 				while(resultset.next()){
 					downSourceModel down =new downSourceModel();
 					down.setId(resultset.getString("id"));
@@ -41,13 +36,13 @@ public class downSourceDaoImpl implements downSource {
 					down.setTime(resultset.getString("time"));
 					down.setUrl(resultset.getString("url"));
 					down.setPictureUrl(resultset.getString("pictureUrl"));
-					list.add( down);
-					
+					list.add( down);	
 				}
 				return list;
-			} catch (SQLException e) {
+				
+			} catch (SQLException e1) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+				e1.printStackTrace();
 			}
 			
 			return list;
@@ -61,7 +56,7 @@ public class downSourceDaoImpl implements downSource {
 		DButils conn=new DButils();
 		Connection connection=conn.DBcon();
 		//Statement statement=conn.DBstatement(connection);
-		String sql="INSERT INTO DOWNSOURCE (NAME,INTRODUCE,TIME,URL,PICTUREURL) VALUES('"+ds.getName()+"','"+ds.getIntroduce()+"','"+ds.getTime()+"','"+ds.getUrl()+"','"+ds.getPictureUrl()+"');";
+		String sql="INSERT INTO downsource (name,introduce,time,url,pictureUrl) VALUES('"+ds.getName()+"','"+ds.getIntroduce()+"','"+ds.getTime()+"','"+ds.getUrl()+"','"+ds.getPictureUrl()+"');";
 		Statement statement;
 		statement=conn.DBstatement(connection);
 		try {
@@ -86,7 +81,7 @@ public class downSourceDaoImpl implements downSource {
 		DButils conn=new DButils();
 		Connection connection=conn.DBcon();
 		Statement statement=conn.DBstatement(connection);
-		String sql="DELETE FROM DOWNSOURCE WHERE ID="+id+";";
+		String sql="DELETE FROM downsource WHERE id="+id+";";
 		try {
 			int resultset=statement.executeUpdate(sql);
 			statement.close();
@@ -106,7 +101,7 @@ public class downSourceDaoImpl implements downSource {
 		DButils conn=new DButils();
 		Connection connection =conn.DBcon();
 		Statement statement =conn.DBstatement(connection);
-		String sql="UPDATE DOWNSOURCE SET NAME='"+ds.getName()+"',introduce='"+ds.getIntroduce()+"',time='"+ds.getTime()+"',url='"
+		String sql="UPDATE downsource SET name='"+ds.getName()+"',introduce='"+ds.getIntroduce()+"',time='"+ds.getTime()+"',url='"
 				+ds.getUrl()+"',pictureUrl='"+ds.getPictureUrl()+"' where id="+ds.getId()+ ";";
 		try {
 			
@@ -132,17 +127,10 @@ public class downSourceDaoImpl implements downSource {
 		DButils conn=new DButils();
 		connection = conn.DBcon();
 		statement =conn.DBstatement(connection);
-		String sql ="SELECT *FROM DOWNSOURCE where id="+id+";";
-		
-		try {
-			resultset=statement.executeQuery(sql);
-		} catch (SQLException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}				
+		String sql ="SELECT *FROM downsource where id="+id+";";
 		downSourceModel down =new downSourceModel();
 		try {
-			
+			resultset=statement.executeQuery(sql);
 			while(resultset.next()){				
 				down.setId(resultset.getString("id"));
 				down.setName(resultset.getString("name"));
@@ -151,11 +139,13 @@ public class downSourceDaoImpl implements downSource {
 				down.setUrl(resultset.getString("url"));
 				down.setPictureUrl(resultset.getString("pictureUrl"));				
 			}
-
-		} catch (SQLException e) {
+			
+		} catch (SQLException e1) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}		
+			e1.printStackTrace();
+		}				
+		
+			
 		return down;
 	}
 

@@ -1,4 +1,9 @@
 package cn.workshop.dao.impl;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -20,34 +25,52 @@ public class introduceMemberDaoImpl implements introduceMember {
 		DButils conn=new DButils();
 		connection = conn.DBcon();
 		statement =conn.DBstatement(connection);
-		String sql =" SELECT *FROM INTRODUCEMEMBER;";
+		String sql =" SELECT *FROM introducemember;";
+		List<introduceMemberModel> list =new ArrayList<introduceMemberModel>();
+//		OutputStream os = null;
+//		  try {
+//			  os = new FileOutputStream("/usr/local/io3.txt");
+//		  } catch (FileNotFoundException e1) {
+//			// TODO 自动生成的 catch 块
+//			  e1.printStackTrace();
+//		  }
+//        PrintWriter pw=new PrintWriter(os);
+		
+		
 		try {
 			resultset=statement.executeQuery(sql);
+			if(resultset.next()) {
+				while(resultset.next()){
+					
+					introduceMemberModel member=new introduceMemberModel();
+					member.setId(resultset.getString("id"));
+					member.setName(resultset.getString("name"));
+					member.setDuty(resultset.getString("duty"));
+					member.setIntroduce(resultset.getString("introduce"));
+					member.setPictureUrl(resultset.getString("pictureUrl"));
+					member.setContactInformation(resultset.getString("contactInformation"));
+					member.setKey(resultset.getString("key"));
+					list.add(member);
+				}
+			}
+			resultset.close();
+			statement.close();
+			connection.close();
+			//pw.write("list没问题");
+			return list;
 		} catch (SQLException e1) {
-			// TODO Auto-generated catch block
+			//pw.write("list有问题 "+e1);
 			e1.printStackTrace();
 		}
 		
-		List<introduceMemberModel> list =new ArrayList<introduceMemberModel>();
 		
-		try {
-			while(resultset.next()){
-				
-				introduceMemberModel member=new introduceMemberModel();
-				member.setId(resultset.getString("id"));
-				member.setName(resultset.getString("Name"));
-				member.setDuty(resultset.getString("Duty"));
-				member.setIntroduce(resultset.getString("introduce"));
-				member.setPictureUrl(resultset.getString("PictureUrl"));
-				member.setContactInformation(resultset.getString("contactInformation"));
-				member.setKey(resultset.getString("key"));
-				list.add(member);
-			}
-			return list;
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		 pw.close();
+//         try {
+// 			os.close();
+// 		  } catch (IOException e1) {
+// 			  // TODO 自动生成的 catch 块
+// 			  e1.printStackTrace();
+// 		  }
 		return list;
 	}
 	
@@ -72,7 +95,7 @@ public class introduceMemberDaoImpl implements introduceMember {
 		DButils conn =new DButils();
 		Connection connection  = conn.DBcon();
 		Statement statement =conn.DBstatement(connection);
-		String sql="INSERT INTO INTRODUCEMEMBER (NAME,DUTY,INTRODUCE,PICTUREURL,CONTACTINFORMATION,`KEY`)"
+		String sql="INSERT INTO introducemember (name,duty,introduce,pictureUrl,contactInformation,`key`)"
 				+ " VALUES ('"+im.getName()+"','"+im.getDuty()+"','"
 		+im.getIntroduce()+"','"+im.getPictureUrl()+"','"+im.getContactInformation()+"','"+im.getKey()+"');";
 		try {
@@ -94,7 +117,7 @@ public class introduceMemberDaoImpl implements introduceMember {
 		DButils conn=new DButils();
 		Connection connection =conn.DBcon();
 		Statement statement =conn.DBstatement(connection);
-		String sql="DELETE FROM INTRODUCEMEMBER WHERE ID="+id+";";
+		String sql="DELETE FROM introducemember WHERE id="+id+";";
 		try {
 			int resultset=statement.executeUpdate(sql);
 			statement.close();
@@ -114,7 +137,7 @@ public class introduceMemberDaoImpl implements introduceMember {
 		DButils conn=new DButils();
 		Connection connection = conn.DBcon();
 		Statement statement =conn.DBstatement(connection);
-		String sql="UPDATE INTRODUCEMEMBER SET NAME='"+im.getName()+"',duty='"+im.getDuty()+"',introduce='"+im.getIntroduce()+"',pictureUrl='"
+		String sql="UPDATE introducemember SET name='"+im.getName()+"',duty='"+im.getDuty()+"',introduce='"+im.getIntroduce()+"',pictureUrl='"
 				+im.getPictureUrl()+"',contactInformation='"+im.getContactInformation()+"',`key`='"+im.getKey()+"' where id="+im.getId()+";";
 		try {
 			statement.execute(sql);
@@ -139,31 +162,29 @@ public class introduceMemberDaoImpl implements introduceMember {
 		DButils conn=new DButils();
 		connection = conn.DBcon();
 		statement =conn.DBstatement(connection);
-		String sql ="SELECT *FROM INTRODUCEMEMBER where id="+id+";";
-		
+		String sql ="SELECT *FROM introducemember where id="+id+";";
+		introduceMemberModel intro =new introduceMemberModel();
 		try {
 			resultset=statement.executeQuery(sql);
+			if(resultset.next()) {
+				while(resultset.next()){				
+					intro.setId(resultset.getString("id"));
+					intro.setName(resultset.getString("name"));
+					intro.setDuty(resultset.getString("duty"));
+					intro.setIntroduce(resultset.getString("introduce"));
+					intro.setPictureUrl(resultset.getString("pictureUrl"));
+					intro.setContactInformation(resultset.getString("contactInformation"));
+					intro.setKey(resultset.getString("key"));				
+				}
+			}
+			
+			
 		} catch (SQLException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}				
-		introduceMemberModel intro =new introduceMemberModel();
-		try {
+		
 			
-			while(resultset.next()){				
-				intro.setId(resultset.getString("id"));
-				intro.setName(resultset.getString("name"));
-				intro.setDuty(resultset.getString("duty"));
-				intro.setIntroduce(resultset.getString("introduce"));
-				intro.setPictureUrl(resultset.getString("pictureUrl"));
-				intro.setContactInformation(resultset.getString("contactInformation"));
-				intro.setKey(resultset.getString("key"));				
-			}
-
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}		
 		return intro;
 	}
 

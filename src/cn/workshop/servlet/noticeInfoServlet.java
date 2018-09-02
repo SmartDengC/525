@@ -42,6 +42,7 @@ public class noticeInfoServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		request.setCharacterEncoding("UTF-8");  //请求页面的编码
 		response.setCharacterEncoding("UTF-8");  //响应页面的编码
+		
 		if(request.getParameter("action")!=null && request.getParameter("action").equals("delect"))//删除
 		{
 			noticeInfoImpl nii=new noticeInfoImpl();
@@ -89,7 +90,10 @@ public class noticeInfoServlet extends HttpServlet {
 
 		List<noticeInfoModel>list=null;
 		noticeInfoImpl nii=new noticeInfoImpl();
+		
 		list=nii.getAllNoticeInfo();
+		
+		
 		request.setAttribute("noticeInfo", list);		
 		if(request.getSession().getAttribute("admin")!=null && request.getSession().getAttribute("admin")=="admin")
 		{

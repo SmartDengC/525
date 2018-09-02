@@ -22,31 +22,27 @@ public class noticeInfoDaoImpl implements noticeInfo {
 		DButils conn=new DButils();
 		connection = conn.DBcon();
 		statement =conn.DBstatement(connection);
-		String sql =" SELECT *FROM NOTICEINFO order by id DESC;";
-		try {
-			resultset=statement.executeQuery(sql);
-		} catch (SQLException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		
+		String sql =" SELECT *FROM noticeinfo order by id DESC;";
 		List<noticeInfoModel> list =new ArrayList<noticeInfoModel>();
 		
 		try {
-			while(resultset.next()){
-				noticeInfoModel info =new noticeInfoModel();
-				info.setId(resultset.getString("id"));
-				info.setTitle(resultset.getString("title"));
-				info.setTime(resultset.getString("time"));
-				info.setText(resultset.getString("text"));
-				info.setPictureUrl(resultset.getString("pictureUrl"));
-				list.add( info);
-				
+			resultset=statement.executeQuery(sql);
+			if(resultset.next()) {
+				while(resultset.next()){
+					noticeInfoModel info =new noticeInfoModel();
+					info.setId(resultset.getString("id"));
+					info.setTitle(resultset.getString("title"));
+					info.setTime(resultset.getString("time"));
+					info.setText(resultset.getString("text"));
+					info.setPictureUrl(resultset.getString("pictureUrl"));
+					list.add( info);	
+				}
 			}
 			return list;
-		} catch (SQLException e) {
+			
+		} catch (SQLException e1) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			e1.printStackTrace();
 		}
 		
 		return list;
@@ -57,7 +53,7 @@ public class noticeInfoDaoImpl implements noticeInfo {
 		DButils conn=new DButils();
 		Connection connection =conn.DBcon();
 		Statement statement =conn.DBstatement(connection);
-		String sql="INSERT INTO NOTICEINFO (title,time,text,pictureUrl) VALUES ('"+ni.getTitle()+"','"+ni.getTime()+"','"+ni.getText()+"','"+ni.getPictureUrl()+"');";
+		String sql="INSERT INTO noticeinfo (title,time,text,pictureUrl) VALUES ('"+ni.getTitle()+"','"+ni.getTime()+"','"+ni.getText()+"','"+ni.getPictureUrl()+"');";
 		try {
 			int  i=statement.executeUpdate(sql);
 			statement.close();
@@ -76,7 +72,7 @@ public class noticeInfoDaoImpl implements noticeInfo {
 		DButils conn=new DButils();
 		Connection connection =conn.DBcon();
 		Statement statement=conn.DBstatement(connection);
-		String sql="DELETE FROM NOTICEINFO WHERE ID="+id+";";
+		String sql="DELETE FROM noticeinfo WHERE id="+id+";";
 		try {
 			int resultset=statement.executeUpdate(sql);
 			statement.close();
@@ -94,7 +90,7 @@ public class noticeInfoDaoImpl implements noticeInfo {
 		DButils conn=new DButils();
 		Connection connection =conn.DBcon();
 		Statement statement =conn.DBstatement(connection);
-		String sql="UPDATE NOTICEINFO  SET title='"+ni.getTitle()+"',time='"+ni.getTime()+"',text='"+ni.getText()+"',pictureUrl='"+ni.getPictureUrl()+"' WHERE ID="+ni.getId()+";";
+		String sql="UPDATE noticeinfo  SET title='"+ni.getTitle()+"',time='"+ni.getTime()+"',text='"+ni.getText()+"',pictureUrl='"+ni.getPictureUrl()+"' WHERE id="+ni.getId()+";";
 		try {
 			statement.execute(sql);
 			statement.close();
@@ -117,29 +113,25 @@ public class noticeInfoDaoImpl implements noticeInfo {
 		DButils conn=new DButils();
 		connection = conn.DBcon();
 		statement =conn.DBstatement(connection);
-		String sql ="SELECT *FROM NOTICEINFO where id="+id+";";
-		
+		String sql ="SELECT *FROM noticeinfo where id="+id+";";
+		noticeInfoModel info =new noticeInfoModel();
 		try {
 			resultset=statement.executeQuery(sql);
+			if(resultset.next()) {
+				while(resultset.next()){				
+					info.setId(resultset.getString("id"));
+					info.setTitle(resultset.getString("title"));
+					info.setTime(resultset.getString("time"));
+					info.setText(resultset.getString("text"));
+					info.setPictureUrl(resultset.getString("pictureUrl"));				
+				}
+			}
+			
 		} catch (SQLException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}				
-		noticeInfoModel info =new noticeInfoModel();
-		try {
-			
-			while(resultset.next()){				
-				info.setId(resultset.getString("id"));
-				info.setTitle(resultset.getString("title"));
-				info.setTime(resultset.getString("time"));
-				info.setText(resultset.getString("text"));
-				info.setPictureUrl(resultset.getString("pictureUrl"));				
-			}
-
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}		
+		
 		return info;
 	}
 

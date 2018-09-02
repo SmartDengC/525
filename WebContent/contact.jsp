@@ -86,9 +86,9 @@
                   <li>邮箱：2389208027@qq.com</li>
                   <li>电话 ：13540823418</li>
                   <li>邮箱：2192154237@qq.com</li>
-                  <li>电话：</li>
+                  <li>QQ：2192154237</li>
                   <li>邮箱：zhuerchaochaol@qq.com</li>
-                  <li>电话：</li>
+                  <li>微信号：zhuchaochao13</li>
               </ul>
               <div class="zikuai4">
                     <div class="sanjiao4"></div>

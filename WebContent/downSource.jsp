@@ -36,7 +36,7 @@
     <div class="nav">
         <div class="buttom">点击展开菜单</div>
        <ul id="nav">
-           <li><a href="index.html" target="_self">首页</a></li>
+           <li><a href="indexServlet" target="_self">首页</a></li>
            <li><a >新闻与媒体</a>
                 <ul>
                 <li><a href="noticeInfoServlet" target="_self" >公共信息</a></li>
